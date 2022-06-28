@@ -1,0 +1,307 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    text-decoration: none;
+    list-style-type: none;
+    outline: none;
+    border: none;
+}
+
+/* --------------- Css Variables --------------- */
+
+:root {
+    --sp-blue: #0d6efd;
+    --sp-indigo: #6610f2;
+    --sp-purple: #6f42c1;
+    --sp-pink: #d63384;
+    --sp-red: #dc3545;
+    --sp-orange: #fd7e14;
+    --sp-yellow: #ffc107;
+    --sp-green: #198754;
+    --sp-teal: #20c997;
+    --sp-cyan: #0dcaf0;
+    --sp-black: #000;
+    --sp-white: #fff;
+    --sp-gray: #6c757d;
+    --sp-gray-dark: #343a40;
+    --sp-gray-100: #f8f9fa;
+    --sp-gray-200: #e9ecef;
+    --sp-gray-300: #dee2e6;
+    --sp-gray-400: #ced4da;
+    --sp-gray-500: #adb5bd;
+    --sp-gray-600: #6c757d;
+    --sp-gray-700: #495057;
+    --sp-gray-800: #343a40;
+    --sp-gray-900: #212529;
+    --sp-primary: #0d6efd;
+    --sp-secondary: #6c757d;
+    --sp-success: #198754;
+    --sp-info: #0dcaf0;
+    --sp-warning: #ffc107;
+    --sp-danger: #dc3545;
+    --sp-light: #f8f9fa;
+    --sp-dark: #212529;
+    --sp-primary-rgb: 13, 110, 253;
+    --sp-secondary-rgb: 108, 117, 125;
+    --sp-success-rgb: 25, 135, 84;
+    --sp-info-rgb: 13, 202, 240;
+    --sp-warning-rgb: 255, 193, 7;
+    --sp-danger-rgb: 220, 53, 69;
+    --sp-light-rgb: 248, 249, 250;
+    --sp-dark-rgb: 33, 37, 41;
+    --sp-white-rgb: 255, 255, 255;
+    --sp-black-rgb: 0, 0, 0;
+    --sp-body-color-rgb: 33, 37, 41;
+    --sp-body-bg-rgb: 255, 255, 255;
+    --sp-font-sans-serif: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans", "Liberation Sans", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    --sp-font-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+    --sp-gradient: linear-gradient(180deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0));
+    --sp-body-font-family: var(--bs-font-sans-serif);
+    --sp-body-font-fira: 'Fira Sans', sans-serif;
+    --sp-body-font-size: 1rem;
+    --sp-body-font-weight: 400;
+    --sp-body-line-height: 1.5;
+    --sp-body-color: #212529;
+    --sp-body-bg: #fff;
+    --sp-border-width: 1px;
+    --sp-border-style: solid;
+    --sp-border-color: #dee2e6;
+    --sp-border-color-translucent: rgba(0, 0, 0, 0.175);
+    --sp-border-radius: 0.375rem;
+    --sp-border-radius-sm: 0.25rem;
+    --sp-border-radius-lg: 0.5rem;
+    --sp-border-radius-xl: 1rem;
+    --sp-border-radius-2xl: 2rem;
+    --sp-border-radius-pill: 50rem;
+    --sp-text-size-medium: 16px;
+    --sp-heading-color: ;
+    --sp-link-color: #0d6efd;
+    --sp-link-hover-color: #0a58ca;
+    --sp-code-color: #d63384;
+    --sp-highlight-bg: #fff3cd;
+    /* cols */
+    --col-1: calc(100% / 12);
+    --col-2: calc(100% / 12 * 2);
+    --col-3: calc(100% / 12 * 3);
+    --col-4: calc(100% / 12 * 4);
+    --col-5: calc(100% / 12 * 5);
+    --col-6: calc(100% / 12 * 6);
+    --col-7: calc(100% / 12 * 7);
+    --col-8: calc(100% / 12 * 8);
+    --col-9: calc(100% / 12 * 9);
+    --col-10: calc(100% / 12 * 10);
+    --col-11: calc(100% / 12 * 11);
+    --col-12: 100%;
+    /* cols */
+}
+
+body,
+html {
+    font-family: var(--sp-body-font-fira);
+    font-size: var(--sp-text-size-medium);
+}
+
+.container {
+    margin: auto;
+    width: 100%;
+    padding: 0 15px;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.flex-wrap {
+    flex-wrap: wrap;
+}
+
+.flex-wrap-reverse {
+    flex-wrap: wrap-reverse;
+}
+
+.flex-row {
+    flex-direction: row;
+}
+
+.flex-column {
+    flex-direction: column;
+}
+
+.align-center {
+    align-items: center;
+}
+
+.align-start {
+    align-items: flex-start;
+}
+
+.align-end {
+    align-items: flex-end;
+}
+
+.justify-between {
+    justify-content: space-between;
+}
+
+.justify-around {
+    justify-content: space-around;
+}
+
+.justify-evenly {
+    justify-content: space-evenly;
+}
+
+.justify-center {
+    justify-content: center;
+}
+
+.d-inline {
+    display: inline;
+}
+
+.d-block {
+    display: block;
+}
+
+.d-inline-block {
+    display: inline-block;
+}
+
+.d-flex {
+    display: flex;
+}
+
+/* cols */
+
+
+/* cols */
+
+/* --------------- Css Variables --------------- */
+
+/* --------------- Call center --------------- */
+/* --------------- Call center --------------- */
+
+/* --------------- Navbar --------------- */
+/* --------------- Navbar --------------- */
+
+/* --------------- Header --------------- */
+/* --------------- Header --------------- */
+
+/* --------------- Responsive Full Header--------------- */
+
+/* x-small devices */
+/* no media this is always transparentА */
+/* x-small devices */
+
+/* small devices */
+
+@media (min-width: 576px) {
+    .container {
+        max-width: 100%;
+        width: 540px;
+    }
+
+    .col-1 {
+        width: var(--col-1);
+    }
+
+    .col-2 {
+        width: var(--col-2);
+    }
+
+    .col-3 {
+        width: var(--col-3);
+    }
+
+    .col-4 {
+        width: var(--col-4);
+    }
+
+    .col-5 {
+        width: var(--col-5);
+    }
+
+    .col-6 {
+        width: var(--col-6);
+    }
+
+    .col-7 {
+        width: var(--col-7);
+    }
+
+    .col-8 {
+        width: var(--col-8);
+    }
+
+    .col-9 {
+        width: var(--col-9);
+    }
+
+    .col-10 {
+        width: var(--col-10);
+    }
+
+    .col-11 {
+        width: var(--col-11);
+    }
+
+    .col-12 {
+        width: var(--col-12);
+    }
+}
+
+/* small devices */
+/* medium devices */
+
+@media (min-width: 768px) {
+    .container {
+        max-width: 100%;
+        width: 720px;
+    }
+}
+
+/* medium devices */
+/* large devices */
+
+@media (min-width: 992px) {
+    .container {
+        max-width: 100%;
+        width: 960px;
+    }
+}
+
+/* large devices */
+/* x-large devices */
+
+@media (min-width: 1200px) {
+    .container {
+        max-width: 100%;
+        width: 1140px;
+    }
+}
+
+/* x-large devices */
+/* xx-large devices */
+
+@media (min-width: 1400px) {
+    .container {
+        max-width: 100%;
+        width: 1320px;
+    }
+}
+
+/* xx-large devices */
+
+/* --------------- Responsive Full Header--------------- */
+
+/* Media Breakpoints use
+  xs: 0,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px,
+  xxl: 1400px 
+*/
