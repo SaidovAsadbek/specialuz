@@ -174,21 +174,171 @@ html {
     display: flex;
 }
 
-/* cols */
-
-
-/* cols */
-
 /* --------------- Css Variables --------------- */
 
 /* --------------- Call center --------------- */
+
+.header-wrapper .row{
+    padding: 5px 0;
+}
+
+.header-wrapper ion-icon, .text-border{
+    color: #fff;
+    margin: 0 10px;
+}
+
+.header-wrapper i{
+    color: #fff;
+}
+
+.header-wrapper a, li{ 
+    margin: 0 30px;
+    color: #fff;
+}
+
 /* --------------- Call center --------------- */
 
-/* --------------- Navbar --------------- */
-/* --------------- Navbar --------------- */
+
+
 
 /* --------------- Header --------------- */
+
+header{
+    position: relative;
+}
+
+.header-wrapper{
+    background: #079c20;
+}
+
 /* --------------- Header --------------- */
+
+
+
+
+/* --------------- Navbar --------------- */
+
+nav{
+    padding: 20px 0;
+    -webkit-box-shadow: 0px 8px 8px 0px rgba(34, 60, 80, 0.2);
+    -moz-box-shadow: 0px 8px 8px 0px rgba(34, 60, 80, 0.2);
+    box-shadow: 0px 8px 8px 0px rgba(34, 60, 80, 0.2);
+}
+
+nav .logo{
+    font-size: 30px;
+    color: #000;
+    font-weight: 500;
+}
+
+nav ul li a{
+    color: #000;
+} 
+
+nav ul li a:hover ion-icon,
+ nav ul li a:hover{
+    color: #007220;
+}
+
+nav ul li a ion-icon{
+    color: #000;
+    margin-right: 10px;
+}
+
+nav .btn-success{
+    cursor: pointer;
+    background: #079c20;
+    padding: 10px 10px;
+    border-radius: 5px;
+    color: #fff;
+    transition: .5ms;
+}
+
+nav .btn-success:hover{
+    background: #007220;
+}
+
+/* --------------- Glass Effect --------------- */
+section  {
+    position: relative;
+}
+
+section .sp-glass{
+    top: 200px;
+    left: 50px;
+    position: absolute;
+    width: 1000px;
+    height: 700px;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0));
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-radius: 20px;
+    border:1px solid rgba(255, 255, 255, 0.18);
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+}
+
+section .sp-glass .sp-header-title{
+    color: #fff;
+    font-size: 60px;
+    font-weight: 400;
+    margin: 40px 0 0 30px;
+}
+
+.sp-glass .sp-header-text{
+    font-size: 23px;
+    margin: 60px 0 0 30px;
+    color: #fff;
+    width: 900px;
+    text-align: justify;
+    font-weight: 200;
+}
+
+.sp-header-glass-btn{
+    margin: 40px 0 0 30px;
+}
+
+section .sp-glass .btn-success{
+    font-size: 20px;
+    padding: 16.5px 19.5px;
+    margin-right: 100px;
+    background: #079c20;
+    border-radius: 5px;
+    color: #fff;
+    transition: .5s;
+}
+
+section .sp-glass .btn-success:hover{
+    cursor: pointer;
+    background: #007220;
+}
+
+.sp-header-glass-btn .btn-outline{
+    background: none;
+    color: #079c20;
+    border: 1.5px solid #079c20;
+    font-size: 20px;
+    padding: 15px 50px;
+    border-radius: 7px;
+    transition: .5s;
+}
+
+.sp-header-glass-btn .btn-outline:hover{
+    background: #079c20;
+    color: #fff;
+    cursor: pointer;
+}
+
+/* --------------- Mockup Images --------------- */
+
+.sp-mockup{
+    position: absolute;
+    top: 250px;
+    right: -70px;
+}
+
+/* --------------- Navbar --------------- */
+
+
 
 /* --------------- Responsive Full Header--------------- */
 
