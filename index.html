@@ -12,6 +12,9 @@
         href="https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
         rel="stylesheet">
     <!-- ------------ Font Awesome ------------ -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+        integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
     <!-- ------------ Animation Css ------------ -->
     <link rel="stylesheet" href="./javascripts/animationJS/css/style.css">
     <!-- ------------ Custom Css ------------ -->
@@ -20,7 +23,80 @@
 </head>
 
 <body>
-
+    <header>
+        <div class="header-wrapper">
+            <div class="container">
+                <div class="row justify-between">
+                    <div class="col-8">
+                        <ul class="d-flex align-center">
+                            <li class="d-flex align-center">
+                                <ion-icon name="call-outline"></ion-icon>
+                                <a href="">
+                                    <span class="address">(99) 480 49 61</span>
+                                </a>
+                            </li>
+                            <li class="d-flex align-center">
+                                <ion-icon name="call-outline"></ion-icon>
+                                <a href="">
+                                    <span class="address">(99) 266 84 79</span>
+                                </a>
+                            </li>
+                            <li class="d-flex align-center">
+                                <ion-icon name="mail-outline"></ion-icon>
+                                <a href="">
+                                    <span class="address email">itspecial@gmail.com</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-3 text-right">
+                        <div class="language d-flex justify-end">
+                            <i class="fa-solid fa-globe"></i>
+                            <a href="/">O'zbekcha</a>
+                            <div class="text-border">|</div>
+                            <a href="/ru">Русский</a>
+                            <div class="text-border">|</div>
+                            <a href="/en">English</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <nav class="navbar navbar-collapse">
+            <div class="container">
+                <div class="row flex-nowrap justify-between align-center">
+                    <div class="col-2">
+                        <a href="/" class="navbar-brand">ITspecial</a>
+                    </div>
+                    <div class="navbar-catalog">
+                        <ul class="d-flex align-center">
+                            <li><a href="" class="d-flex align-center"> Sayt Yaratish
+                                    <ion-icon name="chevron-down-outline"></ion-icon></a></li>
+                            <li><a href="" class="d-flex align-center"> Ish namunalarimiz </a></li>
+                            <li><a href="" class="d-flex align-center"> Narxlar </a></li>
+                            <button class="btn btn-success">Buyurtma berish</button>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </nav>
+        <div class="sp-submenu" id="collapse">
+            <div class="container">
+                <div class="row">
+                    <div class="col-3">
+                        <h2> Dasturlash xizmatlari </h2>
+                        <ul class="d-flex flex-column">
+                            <li class="list">Internet do'kon yaratish</li>
+                            <li class="list">Bir sahifali sayt yaratish</li>
+                            <li class="list">Sayt</li>
+                        </ul>
+                    </div>
+                    <div class="col-4"></div>
+                    <div class="col-5"></div>
+                </div>
+            </div>
+        </div>
+    </header>
     <div id="particles-js"></div>
 
     <!-- scripts -->

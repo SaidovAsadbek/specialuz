@@ -75,12 +75,17 @@
     --sp-border-radius-xl: 1rem;
     --sp-border-radius-2xl: 2rem;
     --sp-border-radius-pill: 50rem;
+    --sp-text-size-small: 14px;
     --sp-text-size-medium: 16px;
     --sp-heading-color: ;
     --sp-link-color: #0d6efd;
     --sp-link-hover-color: #0a58ca;
     --sp-code-color: #d63384;
     --sp-highlight-bg: #fff3cd;
+    --sp-wrapper: #131620;
+    --sp-bg-btn-success: #057518;
+    --sp-btn-success: #079c20;
+    --sp-nav-link: #22dd41;
     /* cols */
     --col-1: calc(100% / 12);
     --col-2: calc(100% / 12 * 2);
@@ -116,6 +121,10 @@ html {
 
 .flex-wrap {
     flex-wrap: wrap;
+}
+
+.flex-nowrap {
+    flex-wrap: nowrap;
 }
 
 .flex-wrap-reverse {
@@ -158,6 +167,10 @@ html {
     justify-content: center;
 }
 
+.justify-end {
+    justify-content: end;
+}
+
 .d-inline {
     display: inline;
 }
@@ -174,14 +187,131 @@ html {
     display: flex;
 }
 
-/* cols */
+.text-center {
+    text-align: center;
+}
 
+.text-right {
+    text-align: right;
+}
 
-/* cols */
+.text-left {
+    text-align: left;
+}
+
+.btn {
+    border: none;
+    outline: none;
+    background: transparent;
+    padding: 10px 25px;
+    border-radius: 3px;
+    text-transform: capitalize;
+    font-weight: 400;
+    font-size: 14px;
+    overflow: hidden;
+    transition: all 300ms ease-in;
+    cursor: pointer;
+}
+
+.btn-success:hover {
+    background: var(--sp-bg-btn-success);
+    box-shadow: inset 30px 30px 30px 30px var(--sp-bg-btn-success);
+}
+
+.btn-success {
+    background: var(--sp-btn-success);
+    color: white;
+}
 
 /* --------------- Css Variables --------------- */
 
 /* --------------- Call center --------------- */
+
+.header-wrapper {
+    padding: 10px 0;
+    /* background: #0F2027; */
+    background: #131620;
+}
+
+.header-wrapper li,
+.header-wrapper i,
+.header-wrapper .text-border,
+.header-wrapper a {
+    color: var(--sp-white);
+    font-size: var(--sp-text-size-small);
+}
+
+.header-wrapper li span {
+    padding: 0 8px;
+}
+
+.language a {
+    padding: 0 5px;
+}
+
+.navbar {
+    background: #191C26;
+    padding: 10px 0;
+}
+
+.navbar-brand {
+    color: var(--sp-white);
+    text-transform: uppercase;
+    font-size: 20px;
+    font-style: italic;
+    font-weight: 500;
+}
+
+.navbar-catalog ul li {
+    border-bottom: 1.5px solid transparent;
+    position: relative;
+    overflow: hidden;
+}
+
+.navbar-catalog ul li::before,
+.navbar-catalog ul li::after {
+    content: "";
+    width: 0%;
+    height: 1.5px;
+    background: var(--sp-nav-link);
+    transition: all 300ms ease-in;
+    position: absolute;
+}
+
+.navbar-catalog ul li::before {
+    bottom: 0;
+    right: 50%;
+}
+
+.navbar-catalog ul li::after {
+    bottom: 0;
+    left: 50%;
+}
+
+.navbar-catalog ul li:hover::after,
+.navbar-catalog ul li:hover::before {
+    width: 50%;
+}
+
+.navbar-catalog ul li a {
+    color: var(--sp-white);
+    font-size: var(--sp-text-size-small);
+    padding: 10px;
+}
+
+.navbar-catalog ul li:hover a {
+    color: var(--sp-nav-link);
+}
+
+.navbar-catalog ul li:first-child ion-icon {
+    padding-left: 5px;
+}
+
+.navbar-catalog .btn-success {
+    margin-left: 7px;
+}
+
+
 /* --------------- Call center --------------- */
 
 /* --------------- Navbar --------------- */
@@ -201,7 +331,7 @@ html {
 @media (min-width: 576px) {
     .container {
         max-width: 100%;
-        width: 540px;
+        width: 100%;
     }
 
     .col-1 {
@@ -259,7 +389,7 @@ html {
 @media (min-width: 768px) {
     .container {
         max-width: 100%;
-        width: 720px;
+        width: 100%;
     }
 }
 
@@ -269,7 +399,7 @@ html {
 @media (min-width: 992px) {
     .container {
         max-width: 100%;
-        width: 960px;
+        width: 100%;
     }
 }
 
@@ -279,7 +409,7 @@ html {
 @media (min-width: 1200px) {
     .container {
         max-width: 100%;
-        width: 1140px;
+        width: 100%;
     }
 }
 

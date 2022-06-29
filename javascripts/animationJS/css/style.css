@@ -174,7 +174,6 @@ html,
 body {
   width: 100%;
   height: 100%;
-  background: #111;
 }
 
 html {
@@ -237,6 +236,7 @@ canvas {
   height: 100%;
   background: linear-gradient(-90deg, #0F2027, #203A43, #2C5364);
   /* background-image: url('../images/bgnomouse.webp'); */
+  /* background: #454545; */
   background-size: cover;
   background-position: 50% 50%;
   background-repeat: no-repeat;
