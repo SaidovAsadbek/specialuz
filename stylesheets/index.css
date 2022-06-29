@@ -43,6 +43,9 @@
     --sp-danger: #dc3545;
     --sp-light: #f8f9fa;
     --sp-dark: #212529;
+    --sp-light-green: #00e200;
+    --sp-light-green2: #00c000;
+    --sp-dark-green: #008d00;
     --sp-primary-rgb: 13, 110, 253;
     --sp-secondary-rgb: 108, 117, 125;
     --sp-success-rgb: 25, 135, 84;
@@ -158,6 +161,10 @@ html {
     justify-content: center;
 }
 
+.justify-end {
+    justify-content: end;
+}
+
 .d-inline {
     display: inline;
 }
@@ -172,22 +179,264 @@ html {
 
 .d-flex {
     display: flex;
+    align-items: center;
 }
 
 
 
 /* --------------- Css Variables --------------- */
+body {
+    background: transparent !important;
+}
 
 /* --------------- Call center --------------- */
-    
+/* .header_wrapper>* {
+    font-size: 12px;
+} */
+
+ion-icon {
+    color: var(--sp-light-green);
+}
+
+.header_wrapper {
+    background: var(--sp-dark);
+}
+
+.header_wrapper .row {
+    padding: 10px 0;
+}
+
+.header_wrapper ul li span {
+    color: white;
+}
+
+.header_wrapper ion-icon {
+    padding-right: 5px;
+}
+
+.header_wrapper li.d-flex {
+    padding-right: 10px;
+}
+
+
+.header_wrapper .language a {
+    overflow: hidden;
+    color: white;
+    width: var(--i);
+    transition: .2s;
+}
+
+.header_wrapper .language a:hover {
+    width: var(--o);
+}
+
 /* --------------- Call center --------------- */
 
 /* --------------- Navbar --------------- */
+nav {
+    background: var(--sp-light-green2);
+}
+
+nav a.link {
+    padding: 8px 10px;
+    margin: 0 5px;
+    color: white;
+    position: relative;
+}
+
+nav a.link::before {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    transition: .3s;
+    background: var(--sp-dark-green);
+}
+
+nav a.link::before {
+    bottom: 0;
+    left: 0;
+}
+
+
+nav a.link:hover::before {
+    width: 100%;
+}
+
+button {
+    cursor: pointer;
+}
+
+.btn-select {
+    padding: 10px 0;
+    background: transparent;
+    color: white;
+    overflow: hidden;
+}
+
+.btn-select ion-icon {
+    color: var(--sp-dark-green);
+    margin-left: 10px;
+    position: relative;
+}
+
+.btn-select:hover ion-icon {
+    animation: select .3s ease-in;
+}
+
+@keyframes select {
+    0% {
+        top: 0;
+    }
+
+    40% {
+        top: 40px;
+    }
+
+    41% {
+        top: -40px;
+    }
+
+    100% {
+        top: 0;
+    }
+}
+
+.btn {
+    overflow: hidden;
+    padding: 20px;
+    cursor: pointer;
+    position: relative;
+}
+
+.btn-light {
+    background: var(--sp-light-green);
+    color: var(--sp-black);
+}
+
+.btn-dark {
+    background: var(--sp-dark-green);
+    color: var(--sp-white);
+}
+
+
+.btn::before,
+.btn::after {
+    content: '';
+    transform: rotate(-45deg) translateY(-10px);
+    position: absolute;
+    width: 0;
+    height: 100px;
+    top: 0;
+    left: 0;
+    transition: .3s;
+}
+
+.btn::after {
+    transition-delay: .2s;
+}
+
+.btn-dark::before {
+    background: var(--sp-light-green2);
+}
+
+.btn-dark::after {
+    background: var(--sp-light-green);
+}
+
+.btn-light::before {
+    background: var(--sp-light-green2);
+}
+
+.btn-light::after {
+    background: var(--sp-dark-green);
+}
+
+.btn:hover::before {
+    width: 50px;
+}
+
+.btn:hover::after {
+    width: 30px;
+}
+
+.btn span {
+    display: inline-block;
+    transition: .3s;
+    transition-delay: .05s;
+}
+
+.btn:hover span {
+    transform: translatex(20px) scale(0.9);
+}
+
 /* --------------- Navbar --------------- */
 
 /* --------------- Header --------------- */
 /* --------------- Header --------------- */
+/* section */
+/* section sp-header-areea */
+.sp-heaader-area {
+    height: 100vh;
+}
 
+.sp-heaader-area .col-6 {
+    padding: 60px 20px 60px 0;
+}
+
+.sp-heaader-area .col-6 .title {
+    font-size: 50px;
+    font-weight: 500;
+    padding-bottom: 20px;
+}
+
+.sp-heaader-area .col-6 p {
+    padding: 10px 0 10px;
+}
+
+.sp-heaader-area .btn {
+    margin-top: 50px;
+}
+
+.glass {
+    color: var(--sp-white);
+}
+
+.sp-heaader-area .col-6 .mocup-phone {
+    position: relative;
+    width: 150px;
+    height: 250px;
+    transform:rotateZ(-10deg);
+}
+.sp-heaader-area .col-6 .mocup-phone img{
+    width: calc(100% - 50px);
+    height: calc(100% - 28px);
+    position: absolute;
+    top: 5px;
+    left: 20px;
+}
+.sp-heaader-area .col-6 .mocup-phone::before {
+    content: '';
+    position: absolute;
+    z-index: 2;
+    width: 150px;
+    height: 250px;
+    background: url('../images/realMocupTell.png') center center / cover;
+}
+.sp-heaader-area .col-6 .mocup{
+    animation:mocup var(--i) ease-in-out infinite;
+}
+@keyframes mocup{
+    0%{
+        top: 0;
+    }50%{
+        top: 20px;
+    }100%{
+        top: 0;
+    }
+}
+/* section sp-header-areea */
+/* section */
 /* --------------- Responsive Full Header--------------- */
 
 /* x-small devices */
