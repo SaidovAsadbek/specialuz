@@ -12,6 +12,8 @@
         href="https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
         rel="stylesheet">
     <!-- ------------ Font Awesome ------------ -->
+    <!-- ------------ Animation Css ------------ -->
+    <link rel="stylesheet" href="./javascripts/animationJS/css/style.css">
     <!-- ------------ Custom Css ------------ -->
     <link rel="stylesheet" href="./stylesheets/index.css">
     <title>Document</title>
@@ -19,6 +21,30 @@
 
 <body>
 
+    <div id="particles-js"></div>
+
+    <!-- scripts -->
+    <script src="./javascripts/animationJS/particles.js"></script>
+    <script src="./javascripts/animationJS/js/app.js"></script>
+    <script>
+        var count_particles, stats, update;
+        stats = new Stats;
+        stats.setMode(0);
+        stats.domElement.style.position = 'absolute';
+        stats.domElement.style.left = '0px';
+        stats.domElement.style.top = '0px';
+        document.body.appendChild(stats.domElement);
+        count_particles = document.querySelector('.js-count-particles');
+        update = function () {
+            stats.begin();
+            stats.end();
+            if (window.pJSDom[0].pJS.particles && window.pJSDom[0].pJS.particles.array) {
+                count_particles.innerText = window.pJSDom[0].pJS.particles.array.length;
+            }
+            requestAnimationFrame(update);
+        };
+        requestAnimationFrame(update);
+    </script>
     <!-- ------------ Custom Js ------------ -->
     <script src="./javascripts/index.js"></script>
     <!-- ------------ Font Awesome Ion-icon ------------ -->
