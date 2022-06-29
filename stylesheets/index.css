@@ -323,10 +323,10 @@ button {
 .btn::before,
 .btn::after {
     content: '';
-    transform: rotate(-45deg) translateY(-10px);
+    transform: rotate(-45deg) translateX(100px);
     position: absolute;
     width: 0;
-    height: 100px;
+    height: 500px;
     top: 0;
     left: 0;
     transition: .3s;
@@ -353,11 +353,11 @@ button {
 }
 
 .btn:hover::before {
-    width: 50px;
+    width: 100px;
 }
 
 .btn:hover::after {
-    width: 30px;
+    width: 80px;
 }
 
 .btn span {
@@ -376,6 +376,13 @@ button {
 /* --------------- Header --------------- */
 /* section */
 /* section sp-header-areea */
+section {
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%);
+    backdrop-filter: blur(10px);
+}
+
 .sp-heaader-area {
     height: 100vh;
 }
@@ -388,6 +395,35 @@ button {
     font-size: 50px;
     font-weight: 500;
     padding-bottom: 20px;
+    position: relative;
+}
+
+.sp-heaader-area .col-6 .title::before {
+    content: 'IT Special';
+    position: absolute;
+    width: max-content;
+    height: max-content;
+    color: var(--sp-light-green);
+    clip-path: polygon(0 23%, 0%100%, 100% 93%);
+    transition: .3s;
+    transition-delay: .3s;
+}
+
+.sp-heaader-area .col-6 .title::after {
+    content: 'IT Special';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: max-content;
+    height: max-content;
+    color: var(--sp-light-green2);
+    clip-path: polygon(0 48%, 0% 100%, 100% 100%);
+    transition: .3s;
+}
+
+.sp-heaader-area .col-6 .title:hover::after,
+.sp-heaader-area .col-6 .title:hover::before {
+    clip-path: polygon(0 81%, 0% 100%, 46% 100%);
 }
 
 .sp-heaader-area .col-6 p {
@@ -406,15 +442,17 @@ button {
     position: relative;
     width: 150px;
     height: 250px;
-    transform:rotateZ(-10deg);
+    transform: rotateZ(-10deg);
 }
-.sp-heaader-area .col-6 .mocup-phone img{
+
+.sp-heaader-area .col-6 .mocup-phone img {
     width: calc(100% - 50px);
     height: calc(100% - 28px);
     position: absolute;
     top: 5px;
     left: 20px;
 }
+
 .sp-heaader-area .col-6 .mocup-phone::before {
     content: '';
     position: absolute;
@@ -423,18 +461,25 @@ button {
     height: 250px;
     background: url('../images/realMocupTell.png') center center / cover;
 }
-.sp-heaader-area .col-6 .mocup{
-    animation:mocup var(--i) ease-in-out infinite;
+
+.sp-heaader-area .col-6 .mocup {
+    animation: mocup var(--i) ease-in-out infinite;
 }
-@keyframes mocup{
-    0%{
+
+@keyframes mocup {
+    0% {
         top: 0;
-    }50%{
+    }
+
+    50% {
         top: 20px;
-    }100%{
+    }
+
+    100% {
         top: 0;
     }
 }
+
 /* section sp-header-areea */
 /* section */
 /* --------------- Responsive Full Header--------------- */
