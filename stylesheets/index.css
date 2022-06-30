@@ -25,6 +25,14 @@
     --sp-black: #000;
     --sp-white: #fff;
     --sp-gray: #6c757d;
+    --main-color: red;
+    --main-color-dark: #a30000;
+    --second-color: #131620;
+    --third-color: #ec7a7a;
+    --link-color: rgb(0, 123, 255);
+    --text-color: #1d1d1f;
+    --main-font: 'Inter''sans-serif';
+    --title-font: 'Montserrat''sans-serif';
     --sp-gray-dark: #343a40;
     --sp-gray-100: #f8f9fa;
     --sp-gray-200: #e9ecef;
@@ -77,6 +85,8 @@
     --sp-border-radius-pill: 50rem;
     --sp-text-size-small: 14px;
     --sp-text-size-medium: 16px;
+    --sp-text-size-medium-small: 25px;
+    --sp-text-size-large: 35px;
     --sp-heading-color: ;
     --sp-link-color: #0d6efd;
     --sp-link-hover-color: #0a58ca;
@@ -223,6 +233,14 @@ html {
     color: white;
 }
 
+.py-3 {
+    padding: 30px 0;
+}
+
+.py-4 {
+    padding: 100px 0;
+}
+
 /* --------------- Css Variables --------------- */
 
 /* --------------- Call center --------------- */
@@ -311,14 +329,113 @@ html {
     margin-left: 7px;
 }
 
+.header-area-content {
+    position: absolute;
+    width: 100%;
+}
+
+.btn-group {
+    position: absolute;
+    bottom: 0;
+    z-index: 100;
+    left: 0;
+}
+
+#particles-js {
+    position: relative;
+    height: 80vh;
+}
+
+.particles-js-canvas-el {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.header-area-content .col-5 {
+    position: relative;
+    padding-bottom: 45px;
+}
+
+.header-area-content .col-5 h2 {
+    font-style: normal;
+    font-weight: bold;
+    font-size: 48px;
+    line-height: 125%;
+    color: #FFFFFF !important;
+    margin-bottom: 25px;
+    font-family: var(--title-font);
+}
+
+.header-area-content .col-5 h2 span {
+    background: -webkit-linear-gradient(var(--sp-bg-btn-success), var(--sp-btn-success));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.header-area-content .col-5 p {
+    color: var(--sp-white);
+    font-size: var(--sp-text-size-medium);
+    line-height: 1.8em;
+    margin: 0 0 20px;
+}
+
+.header-area-content .col-5 .phone-link {
+    color: var(--sp-btn-success);
+    text-decoration: underline;
+    text-underline-offset: 10px;
+    text-decoration-style: dashed;
+    font-size: var(--sp-text-size-medium);
+}
 
 /* --------------- Call center --------------- */
 
-/* --------------- Navbar --------------- */
-/* --------------- Navbar --------------- */
+.sp-submenu {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 1111;
+    /* background: var(--sp-white); */
+    backdrop-filter: blur(20px);
+    user-select: fill;
+}
 
-/* --------------- Header --------------- */
-/* --------------- Header --------------- */
+.sp-submenu ul li {
+    line-height: 1.8em;
+    transition: all 300ms linear;
+}
+
+.sp-submenu ul li:hover {
+    transform: translateX(10px);
+}
+
+.sp-submenu ul li a {
+    color: var(--sp-white);
+    font-weight: 400;
+}
+
+.sp-submenu .col-3 h2 {
+    color: var(--sp-btn-success);
+    font-weight: 700;
+    font-size: var(--sp-text-size-medium-small);
+    padding: 15px 0;
+}
+
+.sp-border {
+    width: 100%;
+    height: 1px;
+    background: var(--sp-white);
+    margin: 80px 0;
+}
+
+.btn-light {
+    background: #ffffff1f;
+    color: var(--sp-white);
+}
+
+.btn-light:hover {
+    background: #ffffff3a !important;
+}
 
 /* --------------- Responsive Full Header--------------- */
 
