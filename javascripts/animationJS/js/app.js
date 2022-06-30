@@ -23,6 +23,7 @@ particlesJS('particles-js',
         }
       },
       "color": {
+        // "value": "#ffffff"
         "value": "#ffffff"
       },
       "shape": {
@@ -64,6 +65,7 @@ particlesJS('particles-js',
         "enable": true,
         "distance": 150,
         "color": "#ffffff",
+        // "color": "#00c000",
         "opacity": 0.4,
         "width": 1
       },

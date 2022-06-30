@@ -137,7 +137,7 @@ del {
 abbr[title],
 dfn[title] {
   border-bottom: 1px dotted;
-  cursor: help
+  cursor: help;
 }
 
 table {
@@ -174,7 +174,6 @@ html,
 body {
   width: 100%;
   height: 100%;
-  background: #111;
 }
 
 html {
@@ -236,6 +235,7 @@ canvas {
   width: 100%;
   height: 100%;
   background: linear-gradient(-90deg, #0F2027, #203A43, #2C5364);
+  /* background: linear-gradient(90deg, #777777, #696969, #000000); */
   /* background-image: url('../images/bgnomouse.webp'); */
   background-size: cover;
   background-position: 50% 50%;
