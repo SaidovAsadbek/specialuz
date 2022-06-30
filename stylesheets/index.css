@@ -55,11 +55,16 @@
     --sp-black-rgb: 0, 0, 0;
     --sp-body-color-rgb: 33, 37, 41;
     --sp-body-bg-rgb: 255, 255, 255;
-    --sp-font-sans-serif: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans", "Liberation Sans", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-    --sp-font-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
-    --sp-gradient: linear-gradient(180deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0));
+    --sp-font-sans-serif: system-ui, -apple-system, "Segoe UI", Roboto,
+        "Helvetica Neue", "Noto Sans", "Liberation Sans", Arial, sans-serif,
+        "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    --sp-font-monospace: SFMono-Regular, Menlo, Monaco, Consolas,
+        "Liberation Mono", "Courier New", monospace;
+    --sp-gradient: linear-gradient(180deg,
+            rgba(255, 255, 255, 0.15),
+            rgba(255, 255, 255, 0));
     --sp-body-font-family: var(--bs-font-sans-serif);
-    --sp-body-font-fira: 'Fira Sans', sans-serif;
+    --sp-body-font-fira: "Fira Sans", sans-serif;
     --sp-body-font-size: 1rem;
     --sp-body-font-weight: 400;
     --sp-body-line-height: 1.5;
@@ -178,167 +183,166 @@ html {
 
 /* --------------- Call center --------------- */
 
-.header-wrapper .row{
+.header-wrapper .row {
     padding: 5px 0;
 }
 
-.header-wrapper ion-icon, .text-border{
+.header-wrapper ion-icon,
+.text-border,
+.header-wrapper i {
     color: #fff;
-    margin: 0 10px;
+    margin-right: 20px;
 }
 
-.header-wrapper i{
-    color: #fff;
-}
-
-.header-wrapper a, li{ 
-    margin: 0 30px;
+.header-wrapper a,
+li {
+    margin-right: 20px;
     color: #fff;
 }
 
 /* --------------- Call center --------------- */
 
-
-
-
 /* --------------- Header --------------- */
 
-header{
+.header-wrapper {
     position: relative;
-}
-
-.header-wrapper{
     background: #079c20;
 }
 
 /* --------------- Header --------------- */
 
-
-
-
 /* --------------- Navbar --------------- */
 
-nav{
+nav {
     padding: 20px 0;
     -webkit-box-shadow: 0px 8px 8px 0px rgba(34, 60, 80, 0.2);
     -moz-box-shadow: 0px 8px 8px 0px rgba(34, 60, 80, 0.2);
     box-shadow: 0px 8px 8px 0px rgba(34, 60, 80, 0.2);
 }
 
-nav .logo{
+nav .logo {
     font-size: 30px;
     color: #000;
     font-weight: 500;
 }
 
-nav ul li a{
+nav ul li a {
+    font-weight: 400;
+    font-family: Inter;
     color: #000;
-} 
-
-nav ul li a:hover ion-icon,
- nav ul li a:hover{
-    color: #007220;
+    transition: .2s;
 }
 
-nav ul li a ion-icon{
+nav ul li a:hover ion-icon,
+nav ul li a:hover {
+    color: #007220;
+    font-size: 17px;
+}
+
+nav ul li a ion-icon {
     color: #000;
     margin-right: 10px;
 }
 
-nav .btn-success{
-    cursor: pointer;
-    background: #079c20;
-    padding: 10px 10px;
-    border-radius: 5px;
+.btn-success {
+    padding: 15px 20px;
+    background: -webkit-linear-gradient(#007220, #079c20);
+    border-radius: 8px;
     color: #fff;
-    transition: .5ms;
+    line-height: 1;
+    border: none;
+    transition: .3s;
 }
 
-nav .btn-success:hover{
-    background: #007220;
+.btn-success:hover {
+    cursor: pointer;
+    box-shadow: 3px 4px 8px 0px #0472239a;
 }
 
 /* --------------- Glass Effect --------------- */
-section  {
-    position: relative;
-}
 
-section .sp-glass{
-    top: 200px;
-    left: 50px;
-    position: absolute;
-    width: 1000px;
-    height: 700px;
-    background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0));
+.sp-glass {
+    width: 600px;
+    height: 400px;
+    background: linear-gradient(135deg,
+            rgba(255, 255, 255, 0.1),
+            rgba(255, 255, 255, 0));
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
     border-radius: 20px;
-    border:1px solid rgba(255, 255, 255, 0.18);
+    border: 1px solid rgba(255, 255, 255, 0.18);
     box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
 }
 
-section .sp-glass .sp-header-title{
+
+
+section .container {
+    position: relative;
+}
+
+
+section .sp-section-banner {
+    position: absolute;
+    top: 120px;
+    left: 0;
+}
+
+section .sp-section-title .sp-section-span {
+    background: -webkit-linear-gradient(#007220, #079c20);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+section .sp-section-banner .sp-section-title {
     color: #fff;
-    font-size: 60px;
-    font-weight: 400;
-    margin: 40px 0 0 30px;
+    width: 700px;
+    font-size: 65px;
+    font-weight: 500;
 }
 
-.sp-glass .sp-header-text{
-    font-size: 23px;
-    margin: 60px 0 0 30px;
-    color: #fff;
-    width: 900px;
-    text-align: justify;
-    font-weight: 200;
-}
-
-.sp-header-glass-btn{
-    margin: 40px 0 0 30px;
-}
-
-section .sp-glass .btn-success{
+section .sp-section-banner .sp-section-text {
     font-size: 20px;
-    padding: 16.5px 19.5px;
-    margin-right: 100px;
-    background: #079c20;
-    border-radius: 5px;
+    font-family: Inter;
+    line-height: 30px;
     color: #fff;
-    transition: .5s;
+    width: 600px;
+    margin-top: 30px;
 }
 
-section .sp-glass .btn-success:hover{
-    cursor: pointer;
-    background: #007220;
+section .sp-section-banner-btn {
+    margin-top: 20px;
 }
 
-.sp-header-glass-btn .btn-outline{
+section .sp-section-banner-btn :first-child {
+    margin-right: 30px;
+}
+
+.btn-outline {
+    padding: 13.5px 30px;
     background: none;
-    color: #079c20;
-    border: 1.5px solid #079c20;
-    font-size: 20px;
-    padding: 15px 50px;
-    border-radius: 7px;
-    transition: .5s;
+    border-radius: 8px;
+    color: #00ca22;
+    border: 1.5px solid #007220;
+    transition: .3s;
 }
 
-.sp-header-glass-btn .btn-outline:hover{
-    background: #079c20;
-    color: #fff;
+.btn-outline:hover {
     cursor: pointer;
+    background: -webkit-linear-gradient(#007220, #079c20);
+    color: #fff;
+    box-shadow: 3px 4px 8px 0px #02641ea1;
 }
 
 /* --------------- Mockup Images --------------- */
 
-.sp-mockup{
+.sp-section-mockup img {
+    width: 800px;
     position: absolute;
-    top: 250px;
-    right: -70px;
+    top: 150px;
+    right: 0px;
 }
 
 /* --------------- Navbar --------------- */
-
-
 
 /* --------------- Responsive Full Header--------------- */
 
