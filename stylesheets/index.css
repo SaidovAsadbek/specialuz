@@ -45,7 +45,8 @@
     --sp-light: #f8f9fa;
     --sp-dark: #212529;
     --sp-light-green: #00e200;
-    --sp-light-green2: #00c000;
+    --sp-light-green2: #0ebd0e;
+    /* --sp-light-green2: #00ff00; */
     --sp-dark-green: #008d00;
     --sp-primary-rgb: 13, 110, 253;
     --sp-secondary-rgb: 108, 117, 125;
@@ -260,7 +261,6 @@ nav a.sp-link::before {
     left: 0;
     width: 10px;
     height: 2px;
-    transition-delay: .5s;
     transition: .3s;
     background: var(--sp-dark-green);
 }
@@ -513,7 +513,7 @@ section {
     z-index: 2;
     width: 150px;
     height: 250px;
-    background: url('../images/realMocupTell.png') center center / cover;
+    background: url('../images/—Pngtree—combined\ vector\ illustration\ computer\ laptop_7361642.png') 10px 50px no-repeat / 100px;
 }
 
 .sp-heaader-area .col-6 .mocup {
