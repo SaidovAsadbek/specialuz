@@ -274,16 +274,18 @@ nav a.sp-link:hover::before {
     0% {
         left: 0;
         width: 100%;
-        background: ;
     }
+
     50% {
         left: 100%;
         width: 10px;
     }
+
     51% {
         left: 0;
         width: 10px;
     }
+
     100% {
         width: 100%;
     }
@@ -320,12 +322,15 @@ button {
     0% {
         top: 0;
     }
+
     40% {
         top: 40px;
     }
+
     41% {
         top: -40px;
     }
+
     100% {
         top: 0;
     }
@@ -351,7 +356,6 @@ button {
 .sp-btn::before,
 .sp-btn::after {
     content: '';
-    transform: rotate(-45deg) translateX(65px);
     position: absolute;
     width: 100px;
     height: 500px;
@@ -361,8 +365,12 @@ button {
 }
 
 .sp-btn::after {
-    transform: rotate(-45deg) translateX(50px);
+    transform: rotate(-45deg) translateX(30px);
     transition-delay: .2s;
+}
+
+.sp-btn::before {
+    transform: rotate(-45deg) translateX(65px);
 }
 
 .sp-btn-dark::before {
@@ -467,9 +475,11 @@ section {
 .sp-heaader-area .col-6 p {
     padding: 10px 0 10px;
 }
-.sp-heaader-area .col-6 .sp-about p:nth-child(3){
+
+.sp-heaader-area .col-6 .sp-about p:nth-child(3) {
     margin-bottom: 50px;
 }
+
 .sp-heaader-area .sp-btn:nth-child(2) {
     margin-left: 10px;
 }
@@ -514,9 +524,11 @@ section {
     0% {
         top: 0;
     }
+
     50% {
         top: 20px;
     }
+
     100% {
         top: 0;
     }
@@ -548,39 +560,51 @@ section {
         max-width: 100%;
         width: 540px;
     }
+
     .col-1 {
         width: var(--col-1);
     }
+
     .col-2 {
         width: var(--col-2);
     }
+
     .col-3 {
         width: var(--col-3);
     }
+
     .col-4 {
         width: var(--col-4);
     }
+
     .col-5 {
         width: var(--col-5);
     }
+
     .col-6 {
         width: var(--col-6);
     }
+
     .col-7 {
         width: var(--col-7);
     }
+
     .col-8 {
         width: var(--col-8);
     }
+
     .col-9 {
         width: var(--col-9);
     }
+
     .col-10 {
         width: var(--col-10);
     }
+
     .col-11 {
         width: var(--col-11);
     }
+
     .col-12 {
         width: var(--col-12);
     }
