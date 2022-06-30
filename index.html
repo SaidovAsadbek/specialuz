@@ -70,8 +70,9 @@
                     </div>
                     <div class="navbar-catalog">
                         <ul class="d-flex align-center">
-                            <li><a href="" class="d-flex align-center"> Sayt Yaratish
-                                    <ion-icon name="chevron-down-outline"></ion-icon></a></li>
+                            <li><a href="#!" id="dropdown-toggle" class="d-flex align-center" aria-expanded="true"> Sayt
+                                    Yaratish
+                                    <ion-icon name="chevron-down-outline" id="up-icon"></ion-icon></a></li>
                             <li><a href="" class="d-flex align-center"> Ish namunalarimiz </a></li>
                             <li><a href="" class="d-flex align-center"> Narxlar </a></li>
                             <button class="btn btn-success">Buyurtma berish</button>
@@ -100,7 +101,7 @@
                 </div>
             </div>
         </section>
-        <div class="sp-submenu" id="collapse">
+        <div class="sp-submenu toggle-menu" id="collapse">
             <div class="container">
                 <div class="py-3">
                     <div class="row">
@@ -128,7 +129,7 @@
                             <ul class="d-flex flex-column">
                                 <li class="list"><a href="">Saytga odamlar kirsa, kartamga pul tushaveradimi?</a></li>
                                 <li class="list"><a href="">Nega saytimdan daromad kelmayapti?</a></li>
-                                <li class="list"><a href="">nega saytim Google ko'rinmayapti?</a></li>
+                                <li class="list"><a href="">Nega saytim Googleda ko'rinmayapti?</a></li>
                                 <li class="list"><a href="">Saytim ishlamay qoldi, bunga nima sabab?</a></li>
                             </ul>
                         </div>
@@ -147,22 +148,11 @@
 
     <!-- scripts -->
     <script src="./javascripts/animationJS/particles.js"></script>
+    <script src="./javascripts/animationJS/js/lib/stats.js"></script>
     <script src="./javascripts/animationJS/js/app.js"></script>
     <script>
-        var count_particles, stats, update;
-        stats = new Stats;
-        stats.setMode(0);
-        stats.domElement.style.position = 'absolute';
-        stats.domElement.style.left = '0px';
-        stats.domElement.style.top = '0px';
-        document.body.appendChild(stats.domElement);
-        count_particles = document.querySelector('.js-count-particles');
+        let count_particles, stats, update;
         update = function () {
-            stats.begin();
-            stats.end();
-            if (window.pJSDom[0].pJS.particles && window.pJSDom[0].pJS.particles.array) {
-                count_particles.innerText = window.pJSDom[0].pJS.particles.array.length;
-            }
             requestAnimationFrame(update);
         };
         requestAnimationFrame(update);
