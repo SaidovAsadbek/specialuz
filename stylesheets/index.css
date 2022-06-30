@@ -335,11 +335,22 @@ section .sp-section-banner-btn :first-child {
 
 /* --------------- Mockup Images --------------- */
 
-.sp-section-mockup img {
-    width: 800px;
+.sp-section-mockup .mockup-image {
+    z-index: 2;
+    width: 600px;
+    height: auto;
     position: absolute;
     top: 150px;
-    right: 0px;
+    right: 0;
+}
+
+.sp-section-mockup .mockup-shadow{
+    z-index: 1;
+    position: absolute;
+    width: 700px;
+    top: 490px;
+    opacity: 0.6;
+    right: 0;
 }
 
 /* --------------- Navbar --------------- */
