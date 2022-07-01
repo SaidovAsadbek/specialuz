@@ -364,7 +364,7 @@ html {
 .header-area-content .col-5 h2 {
     font-style: normal;
     font-weight: bold;
-    font-size: 48px;
+    font-size: 46px;
     line-height: 125%;
     color: #FFFFFF !important;
     margin-bottom: 25px;
@@ -400,7 +400,7 @@ html {
     top: 0;
     width: 100%;
     height: 100%;
-    z-index: 1111;
+    z-index: 1;
     backdrop-filter: blur(20px);
     user-select: fill;
     /* overflow: hidden;
@@ -457,7 +457,191 @@ html {
 .to-up {
     transform: rotate(180deg);
 }
+.col-7{
+    width: 100%;
+}
 
+.header-tablet-section{
+    width: 220px;
+    height: 300px;
+    border: 8px solid black;
+    border-radius: 15px;
+    animation: animate 10s infinite;
+    z-index: 1;
+    /* transform: translate(280%,70%); */
+    /* position: relative; */
+    position: absolute;
+    top: 300px;
+}
+.header-tablet-section img{
+    
+    height: auto;
+    border-radius: 10px;
+    overflow: hidden;
+}
+.tablet-img{
+    width: 185px;
+    width: 100%;
+    height: 100%;
+    background: white;
+    border-radius: 5px;
+    z-index: 2;
+    background: url(../img/mobileWebsite.jpg);
+    background-position: 0;
+    background-size: 100%;
+    /* transition: 15s; */
+    animation: animate  60s linear infinite;
+    /* animation: salom 10s infinite; */
+}
+.col-7{
+    z-index: 1;
+}
+.mobile{
+    position: absolute;
+    top: 384px;
+    right: 340px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 99px;
+    height: 210px;
+    background: #000;
+    border-radius: 15px;
+    z-index: 1;
+}
+
+.header-section{
+    width: 50%;
+    height: 12px;
+    background: #000;
+    border-radius: 0 0 10px 10px;
+    z-index: 3;
+
+}
+
+.screen{
+    width: 94%;
+    height: 96%;
+    background: white;
+    margin-top: -10px;
+    border-radius: 15px;
+    z-index: 1;
+    background: url(../img/mobileWebsite.jpg);
+    background-position: 0;
+    background-size: 100%;
+    /* transition: 15s; */
+    animation: animate  80s linear infinite;
+    /* animation: salom 10s infinite; */
+
+}
+.header-mac-section .mac{
+    width: 50%;
+    background: #000;
+    border-radius: 0 0 10px 10px;
+    z-index: 3;
+}
+.header-mac-section {
+    height: auto;
+   
+    background: white;
+    border-radius: 15px;
+    z-index: 2;
+    background: url(../img/mobileWebsite.jpg);
+    background-size: 100%;
+    /* transition: 15s; */
+    animation: animate  80s linear infinite;
+    /* animation: salom 10s infinite; */
+}
+.salom{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center ;
+    width: 100%;
+    /* overflow: hidden; */
+
+}
+.mac{
+    position: absolute;
+    top: 0%;
+    right: 10%;
+    width: 600px; 
+    /* height: 400px; */
+
+}
+.mac .imgBx{
+    position: absolute;
+    top: 24px;
+    left: 25px;
+    width: 555px;
+    height: 320px;
+    background: url(../img/mobileWebsite.jpg);
+    background-position: top;
+    background-size: 100%;
+    transition: 10s;
+    animation: animate 100s linear infinite;
+}
+@keyframes animate {
+    0%{
+        background-position: top;
+    }
+ 
+   
+    50%{
+        background-position: bottom;
+    }
+  
+   100%{
+    background-position: top;
+
+   }
+
+}
+
+.screen img{
+    margin: auto;
+    width: 103px;
+    height: 200px;
+    border-radius: 15px;
+}
+
+  @keyframes image {
+    0% {
+      top: 0;
+    }
+    25% {
+      top: -100%;
+    }
+    50% {
+      top: calc(-100% - 100%);
+    }
+    75% {
+      top: -100%;
+    }
+    100% {
+      top: 0;
+    }
+  }
+  /* mocup image animate */
+  /* Mocup */
+  .container .col-6 .mocup {
+    animation: mocup var(--i) ease-in-out infinite;
+  }
+  
+  @keyframes mocup {
+    0% {
+      top: 0;
+    }
+  
+    50% {
+      top: 20px;
+    }
+  
+    100% {
+      top: 0;
+    }
+  }
 /* --------------- Responsive Full Header--------------- */
 
 /* x-small devices */
