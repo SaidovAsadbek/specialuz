@@ -478,7 +478,7 @@ section {
   padding: 10px 0 10px;
 }
 
-.sp-heaader-area .col-6 .sp-about p:nth-child(3) {
+.sp-heaader-area .col-6 .sp-about p:nth-child(4) {
   margin-bottom: 50px;
 }
 
@@ -540,7 +540,7 @@ section {
 }
 .sp-heaader-area .col-6 .mocup-com img {
   width: 100%;
-  height: 100%;
+  height: calc(100% - 25px);
   position: relative;
   animation: image 10s ease-in-out infinite;
 }
