@@ -198,109 +198,6 @@ body {
 
 /* --------------- Call center --------------- */
 
-/* .header_wrapper>* {
-    font-size: 12px;
-} */
-
-ion-icon {
-  color: var(--sp-light-green);
-}
-
-.header_wrapper {
-  background: var(--sp-dark);
-}
-
-.header_wrapper .row {
-  padding: 10px 0;
-}
-
-.header_wrapper ul li span {
-  color: white;
-}
-
-.header_wrapper ion-icon {
-  padding-right: 5px;
-}
-
-.header_wrapper li.d-flex {
-  padding-right: 10px;
-}
-
-.header_wrapper .language a {
-  overflow: hidden;
-  color: white;
-  width: var(--i);
-  transition: 0.2s;
-}
-
-.header_wrapper .language a:hover {
-  width: var(--o);
-}
-
-/* --------------- Call center --------------- */
-
-/* --------------- Navbar --------------- */
-
-nav {
-  background: var(--sp-light-green2);
-}
-
-/* modalPage */
-.modalPage {
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  top: 0;
-  z-index: 100;
-  backdrop-filter: blur(10px);
-}
-/* modalPage */
-/* sp-link */
-
-nav a.sp-link {
-  padding: 8px 10px;
-  margin: 0 5px;
-  color: white;
-  position: relative;
-}
-
-nav a.sp-link::before {
-  content: '';
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 10px;
-  height: 2px;
-  transition: 0.3s;
-  background: var(--sp-dark-green);
-}
-
-nav a.sp-link:hover::before {
-  width: 100%;
-  animation: sp-link 0.5s ease-in-out;
-}
-
-@keyframes sp-link {
-  0% {
-    left: 0;
-    width: 100%;
-  }
-
-  50% {
-    left: 100%;
-    width: 10px;
-  }
-
-  51% {
-    left: 0;
-    width: 10px;
-  }
-
-  100% {
-    width: 100%;
-  }
-}
-
 /* sp-link */
 
 /* sp-btn sp-light-btn sp-dark-btn*/
@@ -419,6 +316,139 @@ button {
 
 /* sp-btn sp-light-btn sp-dark-btn*/
 
+/* .header_wrapper>* {
+    font-size: 12px;
+} */
+
+ion-icon {
+  color: var(--sp-light-green);
+}
+
+.header_wrapper {
+  background: var(--sp-dark);
+}
+
+.header_wrapper .row {
+  padding: 10px 0;
+}
+
+.header_wrapper ul li span {
+  color: white;
+}
+
+.header_wrapper ion-icon {
+  padding-right: 5px;
+}
+
+.header_wrapper li.d-flex {
+  padding-right: 10px;
+}
+
+.header_wrapper .language a {
+  overflow: hidden;
+  color: white;
+  width: var(--i);
+  transition: 0.2s;
+}
+
+.header_wrapper .language a:hover {
+  width: var(--o);
+}
+
+/* --------------- Call center --------------- */
+
+/* --------------- Navbar --------------- */
+
+nav {
+  background: var(--sp-light-green2);
+  z-index: 99;
+}
+
+/* modalPage */
+nav .modalPage {
+  position: absolute;
+  width: 100%;
+  height: 0;
+  overflow: hidden;
+  z-index: 55;
+  background: #00000043;
+  backdrop-filter: blur(10px);
+  transition: 1s cubic-bezier(0, 0, 0.45, 1.14);
+}
+nav .modalPage.active{
+    height: 100%;
+}
+nav .modalPage .sp-modal {
+  padding-top: 150px;
+}
+nav .modalPage .sp-modal-body {
+  width: 100%;
+  margin-bottom: 60px;
+}
+nav .modalPage .sp-modal-body ul h2 {
+  font-size: 20px;
+  font-weight: 400;
+  padding: 5px;
+  color: var(--sp-white);
+  border-left: 3px solid var(--sp-light-green);
+}
+nav .modalPage .sp-modal-body ul li{
+    padding-left: 10px;
+}
+nav .modalPage .sp-modal-body ul li a {
+  padding: 20px 0;
+}
+nav .modalPage .sp-modal-body ul li a::before{
+    background: var(--sp-light-green);
+}
+/* modalPage */
+/* sp-link */
+
+nav a.sp-link {
+  display: inline-block;
+  padding: 8px 10px;
+  margin: 0 5px;
+  color: white;
+  position: relative;
+}
+
+nav a.sp-link::before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 10px;
+  height: 2px;
+  transition: 0.3s;
+  background: var(--sp-dark-green);
+}
+
+nav a.sp-link:hover::before {
+  width: 100%;
+  animation: sp-link 0.5s ease-in-out;
+}
+
+@keyframes sp-link {
+  0% {
+    left: 0;
+    width: 100%;
+  }
+
+  50% {
+    left: 100%;
+    width: 10px;
+  }
+
+  51% {
+    left: 0;
+    width: 10px;
+  }
+
+  100% {
+    width: 100%;
+  }
+}
+
 /* --------------- Navbar --------------- */
 
 /* --------------- Header --------------- */
@@ -433,7 +463,7 @@ section {
   position: absolute;
   left: 50%;
   transform: translate(-50%);
-  /* backdrop-filter: blur(10px); */
+  backdrop-filter: blur(10px);
 }
 
 .sp-heaader-area {
@@ -540,7 +570,7 @@ section {
 }
 .sp-heaader-area .col-6 .mocup-com img {
   width: 100%;
-  height: calc(100% - 25px);
+  height: calc(100% - 20px);
   position: relative;
   animation: image 10s ease-in-out infinite;
 }
@@ -551,7 +581,7 @@ section {
   width: 170px;
   height: 240px;
   transform: translate(60px, -290px);
-    z-index: 2;
+  z-index: 2;
   overflow: hidden;
   border-radius: 9px;
 }

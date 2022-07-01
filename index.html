@@ -54,47 +54,13 @@
             </div>
         </div>
         <nav>
-            <!-- <div class="modalPage">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-3">
-                            <h2> Dasturlash xizmatlari </h2>
-                            <ul class="d-flex flex-column">
-                                <li class="list"><a href="">Internet do'kon yaratish</a></li>
-                                <li class="list"><a href="">Bir sahifali sayt yaratish</a></li>
-                                <li class="list"><a href="">Web Portal</a></li>
-                                <li class="list"><a href="">Katalog sayt</a></li>
-                            </ul>
-                        </div>
-                        <div class="col-3">
-                            <h2> Boshqa sayt xizmatlari </h2>
-                            <ul class="d-flex flex-column">
-                                <li class="list"><a href="">Ishlab chiqaruvchilar uchun sayt</a></li>
-                                <li class="list"><a href="">Tibby markaz uchun sayt</a></li>
-                                <li class="list"><a href="">Yuridik firma uchun sayt</a></li>
-                                <li class="list"><a href="">O'quv markazi uchun sayt</a></li>
-                                <li class="list"><a href="">Korporativ sayt yaratish</a></li>
-                            </ul>
-                        </div>
-                        <div class="col-3">
-                            <h2> Ko'p so'ralgan savollar </h2>
-                            <ul class="d-flex flex-column">
-                                <li class="list"><a href="">Saytga odamlar kirsa, kartamga pul tushaveradimi?</a></li>
-                                <li class="list"><a href="">Nega saytimdan daromad kelmayapti?</a></li>
-                                <li class="list"><a href="">Nega saytim Googleda ko'rinmayapti?</a></li>
-                                <li class="list"><a href="">Saytim ishlamay qoldi, bunga nima sabab?</a></li>
-                            </ul>
-                        </div>
-                    </div>
-                </div> -->
-            </div>
             <div class="container">
                 <div class="d-flex justify-between">
                     <col-2>
                         <a href="/" style="color: white;">IT Special</a>
                     </col-2>
                     <div class="col-8 d-flex justify-end">
-                        <button class="sp-btn-select d-flex">Sayt Yaratish<ion-icon name="caret-down-outline">
+                        <button class="sp-btn-select d-flex" id="create">Sayt Yaratish<ion-icon name="caret-down-outline">
                             </ion-icon>
                         </button>
                         <a href="/" class="sp-link">Ish namunalari</a>
@@ -102,6 +68,67 @@
                         <button class="sp-btn sp-btn-dark d-flex"><span>Buyurtma berish</span></button>
                     </div>
                 </div>
+            </div>
+            <div class="modalPage" id="modalPage">
+                <div class="container">
+                    <div class="sp-modal d-flex justify-center align-center">
+                        <div class="col-10">
+                            <div class="sp-modal-body d-flex justify-between">
+                                <ul class="">
+                                    <h2> Dasturlash xizmatlari </h2>
+                                    <li class="list"><a href="" class="sp-link">Internet do'kon yaratish</a></li>
+                                    <li class="list"><a href="" class="sp-link">Bir sahifali sayt yaratish</a></li>
+                                    <li class="list"><a href="" class="sp-link">Web Portal</a></li>
+                                    <li class="list"><a href="" class="sp-link">Katalog sayt</a></li>
+                                </ul>
+                                <ul class="">
+                                    <h2> Dasturlash xizmatlari </h2>
+                                    <li class="list"><a href="" class="sp-link">Internet do'kon yaratish</a></li>
+                                    <li class="list"><a href="" class="sp-link">Bir sahifali sayt yaratish</a></li>
+                                    <li class="list"><a href="" class="sp-link">Web Portal</a></li>
+                                    <li class="list"><a href="" class="sp-link">Katalog sayt</a></li>
+                                </ul>
+                                <ul class="">
+                                    <h2> Dasturlash xizmatlari </h2>
+                                    <li class="list"><a href="" class="sp-link">Internet do'kon yaratish</a></li>
+                                    <li class="list"><a href="" class="sp-link">Bir sahifali sayt yaratish</a></li>
+                                    <li class="list"><a href="" class="sp-link">Web Portal</a></li>
+                                    <li class="list"><a href="" class="sp-link">Katalog sayt</a></li>
+                                </ul>
+                            </div>
+                            <button class="sp-btn sp-btn-light"><span>Buyurtma berish</span></button>
+                        </div>
+                    </div>
+                </div>
+                <!-- <div class="col-3">
+                    <ul class="d-flex flex-column">
+                        <h2> Dasturlash xizmatlari </h2>
+                        <li class="list"><a href="">Internet do'kon yaratish</a></li>
+                        <li class="list"><a href="">Bir sahifali sayt yaratish</a></li>
+                        <li class="list"><a href="">Web Portal</a></li>
+                        <li class="list"><a href="">Katalog sayt</a></li>
+                    </ul>
+                </div>
+                <div class="col-3">
+                    <h2> Boshqa sayt xizmatlari </h2>
+                    <ul class="d-flex flex-column">
+                        <li class="list"><a href="">Ishlab chiqaruvchilar uchun sayt</a></li>
+                        <li class="list"><a href="">Tibby markaz uchun sayt</a></li>
+                        <li class="list"><a href="">Yuridik firma uchun sayt</a></li>
+                        <li class="list"><a href="">O'quv markazi uchun sayt</a></li>
+                        <li class="list"><a href="">Korporativ sayt yaratish</a></li>
+                    </ul>
+                </div>
+                <div class="col-3">
+                    <h2> Ko'p so'ralgan savollar </h2>
+                    <ul class="d-flex flex-column">
+                        <li class="list"><a href="">Saytga odamlar kirsa, kartamga pul tushaveradimi?</a>
+                        </li>
+                        <li class="list"><a href="">Nega saytimdan daromad kelmayapti?</a></li>
+                        <li class="list"><a href="">Nega saytim Googleda ko'rinmayapti?</a></li>
+                        <li class="list"><a href="">Saytim ishlamay qoldi, bunga nima sabab?</a></li>
+                    </ul>
+                </div> -->
             </div>
         </nav>
     </header>
@@ -144,7 +171,6 @@
             </div>
         </div>
     </section>
-
     <div id="particles-js"></div>
 
     <!-- scripts -->
