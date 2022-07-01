@@ -335,12 +335,206 @@ section .sp-section-banner-btn :first-child {
 
 /* --------------- Mockup Images --------------- */
 
-.sp-section-mockup .mockup-image {
-    width: 750px;
-    height: auto;
+.mockup-image {
     position: absolute;
-    top: 150px;
+    top: 180px;
     right: 0;
+}
+
+/* --------------- Tabled --------------- */
+
+.mockup-image .tabled {
+    position: absolute;
+    right: 0;
+    width: 700px;
+}
+
+.mockup-image .tabled img {
+    width: 730px;
+}
+
+.mockup-image .tabled .bg-sp {
+    position: absolute;
+    top: 10px;
+    right: 52px;
+    width: 215px;
+    height: 300px;
+    background: url(../javascripts/animationJS/images/Website\ template.png);
+    background-position: top;
+    background-size: 100%;
+    border-radius: 3px;
+    animation: 22s animatedweb infinite linear;
+}
+
+/* --------------- Laptop --------------- */
+
+.mockup-image .lap {
+    position: absolute;
+    right: 0;
+    width: 700px;
+}
+
+.mockup-image .lap img {
+    width: 700px;
+}
+
+.mockup-image .lap .bg-sp {
+    position: absolute;
+    top: 50px;
+    right: 246px;
+    width: 393px;
+    height: 249px;
+    background: url(../javascripts/animationJS/images/Burger-Website.png);
+    background-position: top;
+    background-size: 100%;
+    border-radius: 2px;
+    animation: 30s animatedweb infinite linear;
+}
+
+/* --------------- Phone --------------- */
+
+.mockup-image .phone {
+    position: absolute;
+    right: 0;
+    width: 700px;
+}
+
+.mockup-image .lap img,
+.mockup-image .tabled img,
+.mockup-image .phone img {
+    width: 700px;
+    position: absolute;
+}
+
+.mockup-image .phone .bg-sp {
+    position: absolute;
+    top: 154px;
+    right: 11px;
+    width: 86px;
+    height: 184px;
+    background: url(../javascripts/animationJS/images/Burger-Pizza.png);
+    background-position: top;
+    background-size: 100%;
+    border-radius: 4px;
+    animation: 10s animatedweb infinite linear;
+}
+
+@keyframes animatedweb {
+    0% {
+        background-position: top;
+    }
+
+    50% {
+        background-position: bottom;
+    }
+
+    100% {
+        background-position: top;
+    }
+}
+
+@keyframes animateWeb {
+    0% {
+        background-position: top;
+    }
+
+    25% {
+        background-position: center;
+    }
+
+    50% {
+        background-position: bottom;
+    }
+
+    75% {
+        background-position: center;
+    }
+
+    100% {
+        background-position: top;
+    }
+}
+
+/* --------------- Submenu --------------- */
+
+@keyframes aniamte {
+    0% {
+        position: absolute;
+        top: 220px;
+        right: 0;
+    }
+
+    50% {
+        position: absolute;
+        top: 200px;
+        right: 0;
+    }
+
+    100% {
+        position: absolute;
+        top: 220px;
+        right: 0;
+    }
+}
+
+/* --------------- Toggle Window --------------- */
+
+.sp-toggle-window {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1111;
+    backdrop-filter: blur(20px);
+    user-select: fill;
+    padding: 30px 0;
+    transition: .5s;
+}
+
+.hide-menu {
+    transform: scale(0);
+}
+
+.header-section-content {
+    position: relative;
+}
+
+.sp-toggle-window .toggle-window ul li {
+    line-height: 1.8em;
+    transition: all 300ms linear;
+}
+
+.sp-toggle-window .toggle-window ul li:hover {
+    transform: translateX(10px);
+}
+
+.sp-toggle-window .toggle-window ul li a {
+    color: #fff;
+    font-weight: 400;
+}
+
+.sp-toggle-window .toggle-window h2 {
+    background: -webkit-linear-gradient(#008d28, #079c20);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    padding: 15px 0;
+    font-size: 25px;
+}
+
+.sp-border {
+    width: 100%;
+    height: 1px;
+    background: var(--sp-white);
+    margin: 80px 0;
+}
+
+#chevronDown {
+    transition: .5s;
+}
+
+.chevron-down {
+    transform: rotate(180deg);
 }
 
 /* --------------- Navbar --------------- */

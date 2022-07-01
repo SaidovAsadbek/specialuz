@@ -24,7 +24,7 @@
 
 <body>
 
-    <!------------------------ Header  ------------------------>
+  <!------------------------ Header  ------------------------>
 
   <header>
     <!------------------------ Header Wrapper  ------------------------>
@@ -75,13 +75,12 @@
 
     <nav>
       <div class="container">
-
         <div class="row justify-between align-center">
           <a href="/" class="logo">IT SPECIAL </a>
           <ul class="d-flex align-center">
-            <li>
-              <a href="#!">
-                <ion-icon name="chevron-down-outline"></ion-icon>Sayt yaratish
+            <li class="toggle-btn">
+              <a href="#!" id="submenu-link">
+                <ion-icon name="chevron-down-outline" id="chevronDown"></ion-icon>Sayt yaratish
               </a>
             </li>
             <li><a href="#!">Ish namunalarimiz</a></li>
@@ -89,19 +88,19 @@
           </ul>
           <button class="btn btn-success">Buyurtma berish</button>
         </div>
-
       </div>
     </nav>
 
     <!------------------------ Particles JS  ------------------------>
   </header>
 
-    <!------------------------ Section  ------------------------>
+  <!------------------------ Section  ------------------------>
 
-  <section>
+  <section class="header-section-content">
+
     <div class="container">
 
-    <!------------------------ Section Banner  ------------------------>
+      <!------------------------ Section Banner  ------------------------>
 
       <div class="sp-section-banner">
         <h1 class="sp-section-title"><span class="sp-section-span">Web Sayt</span> tayyorlab berish xizmati
@@ -120,49 +119,82 @@
         </div>
       </div>
 
-    <!------------------------ PC Phone Tabled  ------------------------>
-
-      <div class="sp-section-mockup">
-        <img class="mockup-image" src="./javascripts/animationJS/images/2368.png" alt="">
+      <!------------------------ PC Phone Tabled  ------------------------>
+      <div class="mockup-image">
+        <div class="tabled">
+          <img src="../specialuz/javascripts/animationJS/images/Tabled.png" alt="">
+          <div class="bg-sp"></div>
+        </div>
+        <div class="lap">
+          <img src="../specialuz/javascripts/animationJS/images/Laptop.png" alt="">
+          <div class="bg-sp"></div>
+        </div>
+        <div class="phone">
+          <div class="bg-sp"></div>
+          <img src="../specialuz/javascripts/animationJS/images/Phone.png" alt="">
+        </div>
       </div>
-      
     </div>
-
     <!------------------------ Particles JS animation bg  ------------------------>
 
     <div id="particles-js"></div>
-  </section>
 
-    <!---------------------- Middle Window  --------------------->
+    <!------------------------ Sub Menu  ------------------------>
 
-    <div class="sp-toggle-window">
-      <div class="toogle-window">
-        
+    <div class="sp-toggle-window hide-menu" id="sp-submenu">
+      <div class="container">
+        <div class="toggle-window">
+          <div class="py-3">
+            <div class="row">
+              <div class="col-3">
+                <h2> Dasturlash xizmatlari </h2>
+                <ul class="d-flex flex-column">
+                  <li class="list"><a href="">Internet do'kon yaratish</a></li>
+                  <li class="list"><a href="">Bir sahifali sayt yaratish</a></li>
+                  <li class="list"><a href="">Web Portal</a></li>
+                  <li class="list"><a href="">Katalog sayt</a></li>
+                </ul>
+              </div>
+              <div class="col-3">
+                <h2> Boshqa sayt xizmatlari </h2>
+                <ul class="d-flex flex-column">
+                  <li class="list"><a href="">Ishlab chiqaruvchilar uchun sayt</a></li>
+                  <li class="list"><a href="">Tibby markaz uchun sayt</a></li>
+                  <li class="list"><a href="">Yuridik firma uchun sayt</a></li>
+                  <li class="list"><a href="">O'quv markazi uchun sayt</a></li>
+                  <li class="list"><a href="">Korporativ sayt yaratish</a></li>
+                </ul>
+              </div>
+              <div class="col-3">
+                <h2> Ko'p so'ralgan savollar </h2>
+                <ul class="d-flex flex-column">
+                  <li class="list"><a href="">Saytga odamlar kirsa, kartamga pul tushaveradimi?</a></li>
+                  <li class="list"><a href="">Nega saytimdan daromad kelmayapti?</a></li>
+                  <li class="list"><a href="">Nega saytim Googleda ko'rinmayapti?</a></li>
+                  <li class="list"><a href="">Saytim ishlamay qoldi, bunga nima sabab?</a></li>
+                </ul>
+              </div>
+            </div>
+            <div class="sp-border"></div>
+            <div class="sp-submenu-call-bar">
+              <div class="row">
+                <button class="btn btn-success">Ish tajribamiz haqida
+                  batafsil</button>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
+
+  </section>
 
   <!-- scripts -->
   <script src="./javascripts/animationJS/particles.js"></script>
   <script src="./javascripts/animationJS/js/app.js"></script>
   <script>
     var count_particles, stats, update;
-    stats = new Stats();
-    stats.setMode(0);
-    stats.domElement.style.position = "absolute";
-    stats.domElement.style.left = "0px";
-    stats.domElement.style.top = "0px";
-    document.body.appendChild(stats.domElement);
-    count_particles = document.querySelector(".js-count-particles");
     update = function () {
-      stats.begin();
-      stats.end();
-      if (
-        window.pJSDom[0].pJS.particles &&
-        window.pJSDom[0].pJS.particles.array
-      ) {
-        count_particles.innerText =
-          window.pJSDom[0].pJS.particles.array.length;
-      }
       requestAnimationFrame(update);
     };
     requestAnimationFrame(update);
