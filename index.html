@@ -23,51 +23,53 @@
     <header>
         <div class="header_wrapper">
             <div class="container">
-                <div class="row justify-between">
-                    <div class="col-9">
-                        <ul class="d-flex">
-                            <li class="d-flex align-center">
-                                <ion-icon name="call-outline"></ion-icon>
-                                <span class="address">+998-99-408 49 61</span>
-                            </li>
-                            <li class="d-flex">
-                                <ion-icon name="mail-outline"></ion-icon>
-                                <span class="address">ITspecial@gmail.com</span>
-                            </li>
-                            <li class="d-flex">
-                                <ion-icon name="call-outline"></ion-icon>
-                                <span class="address">+99899 266 84 79</span>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="col-3">
-                        <div class="language d-flex justify-end align-center">
-                            <ion-icon name="earth-outline"></ion-icon>
-                            <a href="/" style="--i:max-content;">O'zbekcha</a>
-                            <div class="text-border">|</div>
-                            <a href="/ru" style="--i:25px;--o:60px;">Русский</a>
-                            <div class="text-border">|</div>
-                            <a href="/eng" style="--i:26px; --o:53px;">English</a>
+                <div class="row">
+                    <div class="d-flex justify-between align-center">
+                        <div class="col-9">
+                            <ul class="d-flex">
+                                <li class="d-flex align-center">
+                                    <ion-icon name="call-outline"></ion-icon>
+                                    <span class="address">+998-99-408 49 61</span>
+                                </li>
+                                <li class="d-flex">
+                                    <ion-icon name="mail-outline"></ion-icon>
+                                    <span class="address">ITspecial@gmail.com</span>
+                                </li>
+                                <li class="d-flex">
+                                    <ion-icon name="call-outline"></ion-icon>
+                                    <span class="address">+99899 266 84 79</span>
+                                </li>
+                            </ul>
                         </div>
-                    </div>
-                    <div class="col-8">
-                        <div class="d-flex">
+                        <div class="col-3">
                             <div class="language d-flex justify-end align-center">
                                 <ion-icon name="earth-outline"></ion-icon>
                                 <a href="/" style="--i:max-content;">O'zbekcha</a>
                                 <div class="text-border">|</div>
-                                <a href="/ru" style="--i:60px;">Русский</a>
+                                <a href="/ru" style="--i:25px;--o:60px;">Русский</a>
                                 <div class="text-border">|</div>
-                                <a href="/eng" style="--i:53px; ">English</a>
-                                <div class="text-border">|</div>
+                                <a href="/eng" style="--i:25px; --o:53px;">English</a>
                             </div>
                         </div>
-                    </div>
-                    <button class="sp-call-btn" id="sp_call_btn">
-                        <div class="d-flex  justify-center align-center">
-                            <ion-icon name="call-outline"></ion-icon>
+                        <div class="col-8">
+                            <div class="d-flex">
+                                <div class="language d-flex justify-end align-center">
+                                    <ion-icon name="earth-outline"></ion-icon>
+                                    <a href="/" style="--i:max-content;">O'zbekcha</a>
+                                    <div class="text-border">|</div>
+                                    <a href="/ru" style="--i:37px;">Русский</a>
+                                    <div class="text-border">|</div>
+                                    <a href="/eng" style="--i:33px; ">English</a>
+                                    <div class="text-border">|</div>
+                                </div>
+                            </div>
                         </div>
-                    </button>
+                        <button class="sp-call-btn" id="sp_call_btn">
+                            <div class="d-flex  justify-center align-center">
+                                <ion-icon name="call-outline"></ion-icon>
+                            </div>
+                        </button>
+                    </div>
                 </div>
                 <div class="sp-collaps" id="collaps">
                     <div class="row">
@@ -98,20 +100,40 @@
                     <div class='col-2'>
                         <a href="/" style="color: white;">IT Special</a>
                     </div>
-                    <div class="col-8 d-flex justify-end">
-                        <button class="sp-btn-select d-flex" id="create">Sayt Yaratish<ion-icon
+                    <div class="col-10">
+                        <div class="d-flex justify-end">
+                            <button class="sp-btn-select d-flex" id="create">Sayt Yaratish<ion-icon
+                                    name="caret-down-outline">
+                                </ion-icon>
+                            </button>
+                            <a href="/" class="sp-link">Ish namunalari</a>
+                            <a href="/" class="sp-link">Narxlar</a>
+                            <button class="sp-btn sp-btn-dark d-flex"><span>Buyurtma berish</span></button>
+                        </div>
+                    </div>
+                    <button class="sp-bars-btn" id="sp_bars_btn"><span></span></button>
+                </div>
+                <div class="sp-bar" id="sp_bar">
+                    <div class="col-12">
+                        <button class="sp-btn-select d-flex justify-between" id="create">Sayt Yaratish<ion-icon
                                 name="caret-down-outline">
                             </ion-icon>
                         </button>
-                        <a href="/" class="sp-link">Ish namunalari</a>
-                        <a href="/" class="sp-link">Narxlar</a>
+                        <ul>
+                            <li>
+                                <a href="/" class="sp-link">Ish namunalari</a>
+                            </li>
+                            <li>
+                                <a href="/" class="sp-link">Narxlar</a>
+                            </li>
+                        </ul>
                         <button class="sp-btn sp-btn-dark d-flex"><span>Buyurtma berish</span></button>
                     </div>
                 </div>
             </div>
             <div class="modalPage" id="modalPage">
                 <div class="container">
-                    <div class="sp-modal d-flex justify-center align-center">
+                    <div class="sp-modal-body">
                         <div class="col-10">
                             <div class="sp-modal-body d-flex justify-between">
                                 <ul class="">

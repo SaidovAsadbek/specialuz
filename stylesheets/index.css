@@ -309,6 +309,52 @@ button {
 .sp-btn:hover span {
   transform: translatex(20px) scale(0.9);
 }
+/* sp-link */
+
+a.sp-link {
+  display: inline-block;
+  padding: 8px 10px;
+  margin: 0 5px;
+  color: white;
+  position: relative;
+}
+
+a.sp-link::before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 10px;
+  height: 2px;
+  transition: 0.3s;
+  background: var(--sp-dark-green);
+}
+
+a.sp-link:hover::before {
+  width: 100%;
+  animation: sp-link 0.5s ease-in-out;
+}
+
+@keyframes sp-link {
+  0% {
+    left: 0;
+    width: 100%;
+  }
+
+  50% {
+    left: 100%;
+    width: 10px;
+  }
+
+  51% {
+    left: 0;
+    width: 10px;
+  }
+
+  100% {
+    width: 100%;
+  }
+}
 
 /* sp-btn sp-light-btn sp-dark-btn*/
 
@@ -327,7 +373,9 @@ ion-icon {
 .header_wrapper .row {
   padding: 10px 0;
 }
-
+.header_wrapper .row .d-flex.justify-between.align-center {
+  width: 100%;
+}
 .header_wrapper ul li span {
   color: white;
   display: inline-block;
@@ -386,24 +434,32 @@ header .sp-collaps li {
 header .row .sp-call-btn {
   background: transparent;
   display: block;
-  animation: call-btn .5s infinite;
+  animation: call-btn 1s infinite;
 }
 @keyframes call-btn {
   0% {
     transform: rotate(0);
   }
-  25% {
+  10% {
     transform: rotate(5deg);
   }
-  50% {
+  20% {
     transform: rotate(-5deg);
   }
-  75% {
+  30% {
     transform: rotate(5deg);
+  }
+  40% {
+    transform: rotate(0);
   }
   100% {
     transform: rotate(0);
   }
+}
+header .header_wrapper span,
+header .header_wrapper ion-icon,
+header .header_wrapper a {
+  font-size: 10px;
 }
 /* ==== CallCenter ,Collaps ==== */
 
@@ -415,10 +471,28 @@ nav {
   background: var(--sp-light-green2);
   z-index: 99;
 }
-
+nav .justify-between {
+  height: 55px;
+}
+nav .sp-bar .col-12 a {
+  display: block;
+}
+nav .sp-bar .col-12 .sp-btn-select {
+  padding: 0 10px;
+}
+nav .sp-bar .col-12 a {
+  margin: 2px 0;
+}
+nav .sp-bar .col-12 a::before {
+  animation: none;
+}
+nav .sp-bar .col-12 button {
+  width: 100%;
+}
 /* modalPage */
 nav .modalPage {
   position: absolute;
+  top: 0;
   width: 100%;
   height: 0;
   overflow: hidden;
@@ -453,55 +527,100 @@ nav .modalPage .sp-modal-body ul li a {
 nav .modalPage .sp-modal-body ul li a::before {
   background: var(--sp-light-green);
 }
-
 /* modalPage */
-/* sp-link */
-
-nav a.sp-link {
-  display: inline-block;
-  padding: 8px 10px;
-  margin: 0 5px;
-  color: white;
+/* ===== Media nav ===== */
+nav .col-10 {
+  display: none;
+}
+nav .sp-bars-btn {
+  width: 25px;
+  height: 25px;
+  background: transparent;
   position: relative;
+  transform: rotate(0deg);
+  transition: .3s;
+}
+nav .sp-bars-btn.active {
+  transition-delay: .5s;
+  animation: sp-bars-btn 1s ease-in-out;
+  animation-delay: .5s;
+  transform: rotate(45deg);
+}
+@keyframes sp-bars-btn {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(405deg);
+  }
+}
+nav .sp-bars-btn::before,
+nav .sp-bars-btn::after {
+  content: '';
+  transform: translate(-50%);
+  position: absolute;
+  width: 25px;
+  height: 2px;
+  background: var(--sp-white);
+  transition: 0.3s;
+}
+nav .sp-bars-btn.active::before,
+nav .sp-bars-btn.active::after {
+  top: 11px;
+  transform: translate(-50%) rotate(90deg);
 }
 
-nav a.sp-link::before {
+nav .sp-bars-btn::before {
+  top: 4px;
+}
+nav .sp-bars-btn::after {
+  top: 18px;
+}
+nav .sp-bars-btn span::before {
   content: '';
   position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 10px;
+  left: 25px;
+  width: 25px;
   height: 2px;
   transition: 0.3s;
-  background: var(--sp-dark-green);
 }
 
-nav a.sp-link:hover::before {
-  width: 100%;
-  animation: sp-link 0.5s ease-in-out;
+nav .sp-bars-btn span {
+  position: absolute;
+  top: 11px;
+  width: 25px;
+  height: 2px;
+  left: 0;
+  background: var(--sp-white);
+  transition: 0.3s;
+}
+nav .sp-bars-btn.active span {
+  left: 25px;
+  background: transparent;
+}
+nav .sp-bars-btn.active span::before {
+  transition-delay: 0.3s;
+  left: -25px;
+  background: white;
+}
+nav .sp-bar {
+  display: block;
+  background: #008d0051;
+  padding: 0;
+  height: 0px;
+  overflow: hidden;
+  transition: 0.3s;
 }
 
-@keyframes sp-link {
-  0% {
-    left: 0;
-    width: 100%;
-  }
-
-  50% {
-    left: 100%;
-    width: 10px;
-  }
-
-  51% {
-    left: 0;
-    width: 10px;
-  }
-
-  100% {
-    width: 100%;
-  }
+nav .sp-bar.active {
+  padding: 10px 10px;
+  height: 190px;
+}
+nav .sp-bar .sp-btn-select {
+  height: 40px;
 }
 
+/* ===== Media nav ===== */
 /* --------------- Navbar --------------- */
 
 /* --------------- Header --------------- */
@@ -715,6 +834,12 @@ section.main {
 }
 /* section Main */
 @media (min-width: 768px) {
+  /* call - center */
+  header .header_wrapper span,
+  header .header_wrapper ion-icon,
+  header .header_wrapper a {
+    font-size: 15px;
+  }
   header .row .col-9 {
     display: block;
   }
@@ -730,6 +855,21 @@ section.main {
   header .sp-collaps {
     display: none;
   }
+  /* call - center */
+  /* nav Link */
+  nav .col-10 {
+    display: block;
+  }
+  nav .sp-bars-btn {
+    display: none;
+  }
+  nav .sp-bar {
+    display: none;
+  }
+  nav .modalPage {
+    top: auto;
+  }
+  /* nav Link */
 }
 /* --------------- Responsive Full Header--------------- */
 
