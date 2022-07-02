@@ -22,131 +22,185 @@
     <title>Document</title>
 </head>
 
-<body>
-    <header>
-        <div class="header-wrapper">
-            <div class="container">
-                <div class="row justify-between">
-                    <div class="col-8">
-                        <ul class="d-flex align-center">
-                            <li class="d-flex align-center">
-                                <ion-icon name="call-outline"></ion-icon>
-                                <a href="">
-                                    <span class="address">(99) 480 49 61</span>
-                                </a>
-                            </li>
-                            <li class="d-flex align-center">
-                                <ion-icon name="call-outline"></ion-icon>
-                                <a href="">
-                                    <span class="address">(99) 266 84 79</span>
-                                </a>
-                            </li>
-                            <li class="d-flex align-center">
-                                <ion-icon name="mail-outline"></ion-icon>
-                                <a href="">
-                                    <span class="address email">itspecial@gmail.com</span>
-                                </a>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="col-3 text-right">
-                        <div class="language d-flex justify-end">
-                            <i class="fa-solid fa-globe"></i>
-                            <a href="/">O'zbekcha</a>
-                            <div class="text-border">|</div>
-                            <a href="/ru">Русский</a>
-                            <div class="text-border">|</div>
-                            <a href="/en">English</a>
+<body id="body">
+    <div class="header-effect-submenu">
+        <header>
+            <div class="header-wrapper" id="nav">
+                <div class="container">
+                    <div class="row justify-between">
+                        <div class="col-8">
+                            <div class="call-bar-submenu">
+                                <button class="call menu-outline" id="call">
+                                    <ion-icon name="call-outline" id="call-outliner"></ion-icon>
+                                </button>
+                                <div class="call-collapse" id="call-collapse">
+                                    <ul class="d-flex align-center">
+                                        <li class="d-flex align-center">
+                                            <ion-icon name="call-outline"></ion-icon>
+                                            <a href="">
+                                                <span class="address">(99) 033 00 96</span>
+                                            </a>
+                                        </li>
+                                        <li class="d-flex align-center">
+                                            <ion-icon name="call-outline"></ion-icon>
+                                            <a href="">
+                                                <span class="address">(99) 266 84 79</span>
+                                            </a>
+                                        </li>
+                                        <li class="d-flex align-center">
+                                            <ion-icon name="mail-outline"></ion-icon>
+                                            <a href="">
+                                                <span class="address email">itspecial@gmail.com</span>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-3 text-right">
+                            <div class="language d-flex justify-end">
+                                <i class="fa-solid fa-globe"></i>
+                                <a href="/">O'zbekcha</a>
+                                <div class="text-border">|</div>
+                                <a href="/ru">Русский</a>
+                                <div class="text-border">|</div>
+                                <a href="/en">English</a>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
-        <nav class="navbar navbar-collapse">
-            <div class="container">
-                <div class="row flex-nowrap justify-between align-center">
-                    <div class="col-2">
-                        <a href="/" class="navbar-brand">ITspecial</a>
-                    </div>
-                    <div class="navbar-catalog">
-                        <ul class="d-flex align-center">
-                            <li><a href="#!" id="dropdown-toggle" class="d-flex align-center" aria-expanded="true"> Sayt
-                                    Yaratish
-                                    <ion-icon name="chevron-down-outline" id="up-icon"></ion-icon></a></li>
-                            <li><a href="" class="d-flex align-center"> Ish namunalarimiz </a></li>
-                            <li><a href="" class="d-flex align-center"> Narxlar </a></li>
-                            <button class="btn btn-success">Buyurtma berish</button>
-                        </ul>
+            <nav class="navbar navbar-collapse top-bar" id="navbar">
+                <div class="container">
+                    <div class="row flex-nowrap justify-between align-center">
+                        <div class="col-2">
+                            <a href="/" class="navbar-brand">ITspecial</a>
+                        </div>
+                        <div class="navbar-catalog">
+                            <button class="menu-outline d-flex justify-center align-center" id="menu-outline">
+                                <ion-icon name="menu-outline" id="open-navbar"></ion-icon>
+                                <ion-icon name="close-outline" class="hide" id="close-navbar"></ion-icon>
+                            </button>
+                            <div class="navbar-submenu" id="navbar-submenu">
+                                <ul class="d-flex align-center">
+                                    <li><a href="#!" id="dropdown-toggle" class="d-flex align-center"
+                                            aria-expanded="true">
+                                            Sayt
+                                            Yaratish
+                                            <ion-icon name="chevron-down-outline" id="up-icon"></ion-icon>
+                                        </a></li>
+                                    <li><a href="" class="d-flex align-center"> Ish namunalarimiz </a></li>
+                                    <li><a href="" class="d-flex align-center"> Narxlar </a></li>
+                                    <button class="btn btn-success" id="order-btn">Buyurtma berish</button>
+                                </ul>
+                            </div>
+                        </div>
                     </div>
                 </div>
-            </div>
-        </nav>
-    </header>
-    <div id="particles-js">
-        <section class="header-area-content py-4">
-            <div class="container">
-                <div class="row">
-                    <div class="col-5">
-                        <h2> <span> Sayt yaratish </span>profisional xizmatlari </h2>
+                <div class="sp-submenu toggle-menu" id="collapse">
+                    <div class="container">
+                        <div class="py-3">
+                            <div class="row justify-between">
+                                <div class="col-3">
+                                    <h2> Dasturlash xizmatlari </h2>
+                                    <ul class="d-flex flex-column">
+                                        <li class="list"><a href="">Internet do'kon yaratish</a></li>
+                                        <li class="list"><a href="">Bir sahifali sayt yaratish</a></li>
+                                        <li class="list"><a href="">Web Portal</a></li>
+                                        <li class="list"><a href="">Katalog sayt</a></li>
+                                    </ul>
+                                </div>
+                                <div class="col-3">
+                                    <h2> Boshqa sayt xizmatlari </h2>
+                                    <ul class="d-flex flex-column">
+                                        <li class="list"><a href="">Ishlab chiqaruvchilar uchun sayt</a></li>
+                                        <li class="list"><a href="">Tibby markaz uchun sayt</a></li>
+                                        <li class="list"><a href="">Yuridik firma uchun sayt</a></li>
+                                        <li class="list"><a href="">O'quv markazi uchun sayt</a></li>
+                                        <li class="list"><a href="">Korporativ sayt yaratish</a></li>
+                                    </ul>
+                                </div>
+                                <div class="col-4">
+                                    <h2> Ko'p so'ralgan savollar </h2>
+                                    <ul class="d-flex flex-column">
+                                        <li class="list"><a href="">Saytga odamlar kirsa, kartamga pul
+                                                tushaveradimi?</a></li>
+                                        <li class="list"><a href="">Nega saytimdan daromad kelmayapti?</a></li>
+                                        <li class="list"><a href="">Nega saytim Googleda ko'rinmayapti?</a></li>
+                                        <li class="list"><a href="">Saytim ishlamay qoldi, bunga nima sabab?</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="sp-border"></div>
+                            <div class="sp-submenu-call-bar">
+                                <div class="row">
+                                    <a href="/specialuz/" class="btn btn-light" id="btn-light"
+                                        style="text-transform: none;">Ish
+                                        tajribamiz haqida
+                                        batafsil</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+        </header>
+        <div id="particles-js">
+            <section class="header-area-content py-4">
+                <div class="container">
+                    <div class="row justify-between-md">
+                        <div class="col-5 col-sm-12">
+                            <h2> <span> Sayt yaratish </span>profissional xizmatlari </h2>
 
-                        <p>Biznesingiz uchun internet marketing xizmatlari kerakmi? Buni faqat o’z ishining ustalariga
-                            topshiring!</p>
-                        <p>Har bir ishni ustasi qilgan yaxshi. O’zingizni ortiqcha xarajatlardan saqlang.</p>
-                        <p>Hoziroq biz bilan bog'laning.</p>
-                        <div class="btn-group">
-                            <button class="btn btn-success">Buyurtma berish</button>
-                            <a class="phone-link btn" href="tel:(99) 266 84-79">(99) 266 84-79</a>
+                            <p>Biznesingiz uchun internet marketing xizmatlari kerakmi? Buni faqat o’z ishining
+                                ustalariga
+                                topshiring!</p>
+                            <p>Har bir ishni ustasi qilgan yaxshi. O’zingizni ortiqcha xarajatlardan saqlang.</p>
+                            <p>Hoziroq biz bilan bog'laning.</p>
+                            <div class="btn-group">
+                                <button class="btn btn-success">Buyurtma berish</button>
+                                <a class="phone-link btn" href="tel:(99) 266 84-79">(99) 266 84-79</a>
+                            </div>
+                        </div>
+                        <div class="col-6 col-sm-9 position-relative">
+                            <div class="mockup-image">
+                                <div class="tabled">
+                                    <img src="./assets/public/images/Tabled.png" alt="">
+                                </div>
+                                <div class="lap">
+                                    <img src="./assets/public/images/Laptop.png" alt="">
+                                </div>
+                                <div class="phone">
+                                    <img src="./assets/public/images/Phone.png" alt="">
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
-        </section>
-        <div class="sp-submenu toggle-menu" id="collapse">
-            <div class="container">
-                <div class="py-3">
-                    <div class="row">
-                        <div class="col-3">
-                            <h2> Dasturlash xizmatlari </h2>
-                            <ul class="d-flex flex-column">
-                                <li class="list"><a href="">Internet do'kon yaratish</a></li>
-                                <li class="list"><a href="">Bir sahifali sayt yaratish</a></li>
-                                <li class="list"><a href="">Web Portal</a></li>
-                                <li class="list"><a href="">Katalog sayt</a></li>
-                            </ul>
+                <div class="order-menu d-none" id="order-menu">
+                    <form action="">
+                        <div class="d-flex align-center justify-between">
+                            <h2>Biz bilan bog'lanish</h2>
+                            <ion-icon name="close-outline" id="close-menu"></ion-icon>
                         </div>
-                        <div class="col-3">
-                            <h2> Boshqa sayt xizmatlari </h2>
-                            <ul class="d-flex flex-column">
-                                <li class="list"><a href="">Ishlab chiqaruvchilar uchun sayt</a></li>
-                                <li class="list"><a href="">Tibby markaz uchun sayt</a></li>
-                                <li class="list"><a href="">Yuridik firma uchun sayt</a></li>
-                                <li class="list"><a href="">O'quv markazi uchun sayt</a></li>
-                                <li class="list"><a href="">Korporativ sayt yaratish</a></li>
-                            </ul>
+                        <div class="mb-4">
+                            <input type="text" name="name" placeholder="Ismingizni kiriting">
                         </div>
-                        <div class="col-3">
-                            <h2> Ko'p so'ralgan savollar </h2>
-                            <ul class="d-flex flex-column">
-                                <li class="list"><a href="">Saytga odamlar kirsa, kartamga pul tushaveradimi?</a></li>
-                                <li class="list"><a href="">Nega saytimdan daromad kelmayapti?</a></li>
-                                <li class="list"><a href="">Nega saytim Googleda ko'rinmayapti?</a></li>
-                                <li class="list"><a href="">Saytim ishlamay qoldi, bunga nima sabab?</a></li>
-                            </ul>
+                        <div class="mb-4">
+                            <input type="text" value="+998" name="phone" placeholder="Telefon raqamingizni kiriting">
                         </div>
-                    </div>
-                    <div class="sp-border"></div>
-                    <div class="sp-submenu-call-bar">
-                        <div class="row">
-                            <button class="btn btn-light" style="text-transform: none;">Ish tajribamiz haqida
-                                batafsil</button>
+                        <div class="mb-4">
+                            <textarea name="company" placeholder="Kompaniya nomini kiriting" id=""></textarea>
                         </div>
-                    </div>
+                        <button class="btn btn-success">Yuborish</button>
+                    </form>
                 </div>
-            </div>
+            </section>
         </div>
     </div>
 
     <!-- scripts -->
+    <script src="./javascripts/jQuery.min.js"></script>
     <script src="./javascripts/animationJS/particles.js"></script>
     <script src="./javascripts/animationJS/js/lib/stats.js"></script>
     <script src="./javascripts/animationJS/js/app.js"></script>
