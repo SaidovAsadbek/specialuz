@@ -24,7 +24,7 @@
 
 <body>
     <header>
-        <div class="header-wrapper">
+        <div class="header-wrapper align-center">
             <div class="container">
                 <div class="row justify-between">
                     <div class="col-8">
@@ -62,28 +62,33 @@
                 </div>
             </div>
         </div>
-        <nav class="navbar navbar-collapse">
+        <nav class="navbar navbar-collapse" id="">
             <div class="container">
                 <div class="row flex-nowrap justify-between align-center">
                     <div class="col-2">
                         <a href="/" class="navbar-brand">ITspecial</a>
                     </div>
+                    <div id="toggle"></div>
                     <div class="navbar-catalog">
-                        <ul class="d-flex align-center">
+                        <ul class=" align-center">
                             <li><a href="#!" id="dropdown-toggle" class="d-flex align-center" aria-expanded="true"> Sayt
                                     Yaratish
-                                    <ion-icon name="chevron-down-outline" id="up-icon"></ion-icon></a></li>
+                                    <ion-icon name="chevron-down-outline" id="up-icon"></ion-icon>
+                                </a></li>
                             <li><a href="" class="d-flex align-center"> Ish namunalarimiz </a></li>
                             <li><a href="" class="d-flex align-center"> Narxlar </a></li>
                             <button class="btn btn-success">Buyurtma berish</button>
                         </ul>
+                    </div>
+                    <div class="menu-btn" >
+                        <div class="menu-btn__burger"></div>
                     </div>
                 </div>
             </div>
         </nav>
     </header>
     <div id="particles-js">
-        <section class="header-area-content py-4">
+        <section class="header-area-content py-4  ">
             <div class="container">
                 <div class="row">
                     <div class="col-5">
@@ -99,26 +104,24 @@
                         </div>
                     </div>
                     <div class="col-7 d-flex ">
-                        <!-- <img src="./img/laptop.png " class="laptop" alt="">
-                        <img src="./img/phone.png" class="phone" alt=""> -->
-                       <div class="header-tablet-section">
-                           <div class="tablet"></div>
-                           <div class="tablet-img">
 
-                           </div>
-                            <!-- <img src="./img/mobileWebsite.jpg" alt=""> -->
-                         </div>
+                        <div class="header-tablet-section">
+                            <div class="tablet"></div>
+                            <div class="tablet-img">
+
+                            </div>
+                        </div>
                         <div class="mobile">
                             <div class="header-section"></div>
                             <div class="screen">
-                             </div>
-                        </div> 
-                      <div class="salom">
-                        <div class="mac">
-                            <img src="./img/mac.png" alt="">
-                            <div class="imgBx"></div>
+                            </div>
                         </div>
-                      </div>  
+                        <div class="salom">
+                            <div class="mac">
+                                <img src="./img/mac.png" alt="">
+                                <div class="imgBx"></div>
+                            </div>
+                        </div>
                     </div>
                     <!-- <div class="col-6">
                         <div class="mocup-phone mocup" style="--i:2s;">
@@ -184,6 +187,52 @@
             </div>
         </div>
     </div>
+    <main>
+        <div class="container">
+            <h2>Xizmat narxlarini shu yerni o’zida <span>hisoblab ko’ring</span>
+                <div class="row">
+
+
+            </h2>
+            <div class="big-card">
+
+                <div class="card">
+                    <div class="box">
+                        <div class="content">
+
+                            <h2>Sayt yaratish</h2>
+                            <p class="narx">3,798,750 <span>so'm</span></p>
+                            <p>Boshlang'ich narx</p>
+                            <button>Kalkulatorda hisoblash</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="box">
+                        <div class="content">
+
+                            <h2>Sayt yaratish</h2>
+                            <p class="narx">3,798,750 <span>so'm</span></p>
+                            <p>Boshlang'ich narx</p>
+                            <button>Kalkulatorda hisoblash</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="box">
+                        <div class="content">
+
+                            <h2>Sayt yaratish</h2>
+                            <p class="narx">3,798,750 <span>so'm</span></p>
+                            <p>Boshlang'ich narx</p>
+                            <button>Kalkulatorda hisoblash</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+    </main>
 
     <!-- scripts -->
     <script src="./javascripts/animationJS/particles.js"></script>
@@ -199,6 +248,35 @@
     <!-- ------------ Custom Js ------------ -->
     <script src="./javascripts/index.js"></script>
     <!-- ------------ Font Awesome Ion-icon ------------ -->
+
+    <script>
+        const toggle = document.querySelector('.menu-btn')
+        const navbar = document.querySelector('.navbar-catalog')
+        console.log(toggle);
+        console.log(navbar);
+        toggle.addEventListener('click', () => {
+            toggle.classList.toggle('active')
+            navbar.classList.toggle('active')
+        })
+
+
+
+
+        const menuBtn = document.querySelector('.menu-btn');
+
+
+        let menuOpen = false;
+        menuBtn.addEventListener('click', () => {
+            if (!menuOpen) {
+                menuBtn.classList.add('open');
+                menuOpen = true;
+            } else {
+                menuBtn.classList.remove('open');
+                menuOpen = false;
+            }
+        });
+        // toggle.onclick.toggle('active')
+    </script>
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 </body>
