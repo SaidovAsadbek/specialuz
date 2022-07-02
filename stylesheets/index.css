@@ -610,6 +610,49 @@ section .sp-section-banner-btn :first-child {
         max-width: 100%;
         width: 720px;
     }
+
+    .header-wrapper ion-icon,
+    .text-border,
+    .header-wrapper i {
+        color: #fff;
+        margin-right: 5px;
+        font-size: 14px;
+    }
+
+    .header-wrapper ul li span{
+        margin-right: 10px;
+    }
+
+    .header-wrapper a,
+    li {
+        margin-right: 7px;
+        color: #fff;
+        font-size: 14px;
+    }
+
+    .col-3 {
+        width: calc(100% / 12 * 4);
+    }
+
+    .mockup-image{
+        top: 650px;
+    }
+
+    .sp-section-banner .sp-section-title{
+        text-align: center;
+    }
+
+    .sp-section-banner .sp-section-text{
+        text-align: center;
+        margin: auto;
+    }
+
+    .sp-section-banner .sp-section-banner-btn{
+        text-align: center;
+    }
+    #particles-js{
+        height: 140vh;
+    }
 }
 
 /* medium devices */
@@ -619,6 +662,36 @@ section .sp-section-banner-btn :first-child {
     .container {
         max-width: 100%;
         width: 960px;
+    }
+
+    .lap {
+        display: none;
+    }   
+
+    .tabled, .phone{
+        display: block;
+    }
+
+    .col-3 {
+        width: calc(100% / 12 * 4);
+    }
+    .sp-section-banner .sp-section-title{
+        text-align: start;
+    }
+
+    .sp-section-banner .sp-section-text{
+        text-align: start;
+        margin: 0;
+    }
+
+    .sp-section-banner .sp-section-banner-btn{
+        text-align: start;
+    }
+    .mockup-image{
+        display: block;
+    }
+    .mockup-image{
+        top: 180px;
     }
 }
 
@@ -630,6 +703,18 @@ section .sp-section-banner-btn :first-child {
         max-width: 100%;
         width: 1140px;
     }
+
+    .lap {
+        display: none;
+    }
+
+    .tabled, .phone{
+        display: block;
+    }
+
+    .col-3 {
+        width: calc(100% / 12 * 3);
+    }
 }
 
 /* x-large devices */
@@ -639,6 +724,15 @@ section .sp-section-banner-btn :first-child {
     .container {
         max-width: 100%;
         width: 1320px;
+    }
+
+    .lap,
+    .tabled {
+        display: block;
+    }
+
+    .col-3 {
+        width: calc(100% / 12 * 3);
     }
 }
 
