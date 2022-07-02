@@ -174,19 +174,19 @@ html {
     display: flex;
 }
 
-.btn{
+.btn {
     background: #22d60a;
     font-weight: 650;
     font-size: 15px;
     transition: .6s;
     padding: 6px 15px;
     border: 1px solid #22d60a;
-    border-top-left-radius: 15px;
-    border-bottom-right-radius: 15px;
+    /* border-top-left-radius: 15px;
+    border-bottom-right-radius: 15px; */
 }
 
 
-.btn:hover{
+.btn:hover {
     border: 1px solid #22d60a;
     background: #212638;
     color: #22d60a;
@@ -196,29 +196,36 @@ html {
 /* --------------- Css Variables --------------- */
 
 /* --------------- Call center --------------- */
-.header-wrapper{
+.header-wrapper {
     background: #131620;
 }
-.row .col-8 ul li{
+
+.row .col-8 ul li {
     margin-top: 5px;
     margin-right: 20px;
     color: rgba(255, 255, 255, 0.644);
     font-weight: 400;
 }
-.col-3 .language{
+
+.col-3 .language {
     padding: 5px 0;
+    justify-content: space-between;
 }
-.col-3 .language a{
+/* 
+.col-3 .language a   {
     margin: 0 15px;
-}
-.col-3 .language a, .language .text-border
-{
+} */
+
+.col-3 .language a,
+.language .text-border {
     color: #ffffffa4;
-} 
-.header-wrapper .row ion-icon{
+}
+
+.header-wrapper .row ion-icon {
     color: #22d60a;
     margin-right: 5px;
 }
+
 /* --------------- Call center --------------- */
 
 /* --------------- Navbar --------------- */
@@ -226,89 +233,219 @@ html {
     background: #212638;
 }
 
-.navbar .container .col-2 a{
+.navbar .container .col-2 a {
     font-size: 20px;
     color: #22d60a;
     font-weight: 550;
 }
+
 .navbar .col-8 {
-   justify-content: end;
-   margin: 5px 0;
-   align-items: center;
+    justify-content: end;
+    margin: 5px 0;
+    align-items: center;
 }
-.navbar ul{
+
+.navbar ul {
     justify-content: end;
 }
-.navbar ul li a{
+
+.navbar ul li button {
     padding: 5px 20px;
     margin: 5px 15px;
-    border: 1px solid #22d60a;
-    border-top-left-radius: 15px;
-    border-bottom-right-radius: 15px;
+    background: transparent;
+    /* font-size: 13px; */
+    /* border: 1px dashed #22d60a; */
+    /* border-top-left-radius: 15px;
+    border-bottom-right-radius: 15px; */
 }
-.navbar ul li,
-.navbar ul li a{
+
+.navbar ul li button {
     display: inline-block;
-    transition: 1.2s;
+    transition: .8s;
     color: #22d60a;
     font-weight: 500;
 }
-.navbar ul li:hover a{
+
+.navbar ul button:hover {
     color: #212638;
     background: #22d60a;
 }
 
 /* --------------- Navbar --------------- */
+/* 
 
+
+*/
+.div{
+    background: url(../img/landing\ page.jpg);
+}
 /* --------------- Section --------------- */
-section{
+/* #particles-js{
+    position: relative;
+    height: 40vh; 
+    top: 0;
+} */
+section {
     transform: translate(-50%);
     position: absolute;
     left: 50%;
-    /* pointer-events: none; */
+    width: 100%;
+
 }
 
-section .container .row .col-6 .card{
+section .container .row .col-6 .sp-about {
     width: 500px;
     margin: 60px 0;
-    /* padding: 30px 30px ; */
-    /* border: 3px solid #ffffffa4; */
-    /* border-top-left-radius: 40px; */
-    /* border-bottom-right-radius: 40px; */
-    /* box-sizing: border-box; */
-    /* transition: .8s; */
-    /* box-shadow: 0 1px 20px rgba(0,0,0,0.3); */
-
 }
-section .container .row .card h1{
+
+section .container .row .sp-about h1 {
     font-size: 50px;
     font-weight: 500;
     font-style: Droid sans Mono;
     color: #22d60a;
 }
-section .container .row .card p{
-    color: #ffffffa4;
+
+section .container .row .sp-about p {
+    color: #ffffffd7;
     padding: 20px 0;
-    /* transition: .5s; */
 }
-section .container .row .card .button{
+
+section .container .row .sp-about .button {
     width: 100%;
     display: flex;
     justify-content: space-between;
 }
-/* section .container .row .col-6:hover .card{
-    transform: translateY(-30px);
-    box-shadow: 0 10px 40px rgba(0,0,0,0.7);
+
+.container .col-6 span {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container .col-6 img {
+    width: 300px;
+}
+
+/* -------------- Modal page start -------------- */
+.modal {
+    width: 100%;
+    height: 100vh;
+    opacity: .8s;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 0;
+    overflow: hidden;
+    transition: .5s;
+    margin-bottom: 20px;
+    backdrop-filter: blur(20px);
+}
+
+.modal.active {
+    width: 100%;
+    height: 100vh;
+    opacity: .8s;
+}
+
+.modal-card {
+    width: 100%;
+    justify-content: space-between;
+}
+
+.modal-card .question:first-child,
+.modal-card .question:nth-last-child(2){
+    padding-right: 25px;
+}
+
+.question {
+    /* top: 50%; */
+    padding: 15% 0;
+    align-items: center;
+}
+
+.question h2 {
+    font-size: 30px;
+    font-weight: 500;
+    color: #22d60a;
+    margin-bottom: 20px;
+}
+
+.question p {
+    font-size: 17px;
+    font-weight: 400;
+    color: #ffffffef;
+    line-height: 30px;
+}
+/* -------------- Modal page end -------------- */
+main{
+    background-color: #f8f9fa;
+}
+main .container .sp-card-page{
+    align-items: center;
+    width: 100%;
+    /* height: 100vh; */
+}
+main .container .sp-card-page .paragraph-h2{
+    align-items: center;
+    justify-content: center;
+    width: 500px;
+    margin: auto;
+    text-align: center;
+    padding: 30px 0;
+    /* height: 800px; */
+}
+main .container .sp-card-page .paragraph-h2 h2{
+    color: #22d60a;
+    font-size: 40px;
+    font-weight: 600;
+}
+
+.sp-card-page .sp-card{
+    justify-content: space-around;
+}
+.sp-card-page .sp-card .card{
+    width: 300px;
+    height: 400px;
+    position: relative;
+    text-align: center;
+    background: #fff;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.2);
+    transition: .5s;
+    border: 1px dashed #22d60a ;
+    padding: 20px 0;
+}
+
+.sp-card-page .sp-card .card:hover{
+    filter: blur(0px);
+    transform: scale(1.1);
+    opacity: 1;
+}
+/* .sp-card-page .sp-card .card .circle{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background: #666;
+    clip-path: circle(180px at center 0);
+    text-align: center;
 } */
-/* section .container .row .col-6:hover .card p {
-    color: #e8ecf0;
+.sp-card-page .sp-card .card  h3{
+    color: #22d60a;
+    font-size: 30px;
+    
+}
 
-} */
+.sp-card-page .sp-card .card  p{
+    text-align: center;
+    color: #666;
+}
 
 
+@media(min-width: 992px){
 
-
-
+}
 /* --------------- Section --------------- */
 
 /* --------------- Responsive Full Header--------------- */
