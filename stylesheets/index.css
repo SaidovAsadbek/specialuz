@@ -192,7 +192,6 @@ html {
 
 /* --------------- Css Variables --------------- */
 
-
 /* --------------- Call center --------------- */
 
 /* sp-link */
@@ -331,6 +330,7 @@ ion-icon {
 
 .header_wrapper ul li span {
   color: white;
+  display: inline-block;
 }
 
 .header_wrapper ion-icon {
@@ -351,6 +351,61 @@ ion-icon {
 .header_wrapper .language a:hover {
   width: var(--o);
 }
+/* ====CallCenter, Collaps ==== */
+header .row .col-9 {
+  display: none;
+}
+header .row .col-3 {
+  display: none;
+}
+header .row .col-8 {
+  display: block;
+}
+header .sp-collaps {
+  display: block;
+  height: 0;
+  background: #ffffff05;
+  overflow: hidden;
+  transition: 0.3s;
+}
+header .sp-collaps.active {
+  height: 112.5px;
+}
+header .sp-collaps .row {
+  flex-direction: column;
+  padding: 5px 5px;
+}
+header .sp-collaps ul {
+  width: 100%;
+}
+header .sp-collaps li {
+  margin-bottom: 5px;
+  padding: 5px;
+  background: #ffffff16;
+}
+header .row .sp-call-btn {
+  background: transparent;
+  display: block;
+  animation: call-btn .5s infinite;
+}
+@keyframes call-btn {
+  0% {
+    transform: rotate(0);
+  }
+  25% {
+    transform: rotate(5deg);
+  }
+  50% {
+    transform: rotate(-5deg);
+  }
+  75% {
+    transform: rotate(5deg);
+  }
+  100% {
+    transform: rotate(0);
+  }
+}
+/* ==== CallCenter ,Collaps ==== */
 
 /* --------------- Call center --------------- */
 
@@ -373,7 +428,7 @@ nav .modalPage {
   transition: 1s cubic-bezier(0, 0, 0.45, 1.14);
 }
 nav .modalPage.active {
-    height: 100%;
+  height: 100%;
 }
 nav .modalPage .sp-modal {
   padding-top: 150px;
@@ -398,6 +453,7 @@ nav .modalPage .sp-modal-body ul li a {
 nav .modalPage .sp-modal-body ul li a::before {
   background: var(--sp-light-green);
 }
+
 /* modalPage */
 /* sp-link */
 
@@ -464,25 +520,22 @@ nav a.sp-link:hover::before {
 } */
 .sp-heaader-area {
   width: 100%;
-  background: url('../images/bg2.jpg') center center  /cover;
-  height: 100vh;
+  background: url('../images/bg2.jpg') center center / cover;
+  height: 100%;
 }
-.sp-heaader-area::before{
-    content: '';
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.27);
+.sp-heaader-area::before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.27);
 }
-.sp-heaader-area>*{
-    position: relative;
-    z-index: 44;
+.sp-heaader-area > * {
+  position: relative;
+  z-index: 44;
 }
 .sp-heaader-area .d-flex.align-center.justify-center {
   height: 100%;
-}
-.sp-heaader-area .col-6 {
-  padding: 60px 20px 60px 0;
 }
 
 .sp-heaader-area .col-6 .sp-title {
@@ -661,7 +714,23 @@ section.main {
   background: rgba(0, 0, 0, 0.408);
 }
 /* section Main */
-
+@media (min-width: 768px) {
+  header .row .col-9 {
+    display: block;
+  }
+  header .row .col-3 {
+    display: block;
+  }
+  header .row .col-8 {
+    display: none;
+  }
+  header .row .sp-call-btn {
+    display: none;
+  }
+  header .sp-collaps {
+    display: none;
+  }
+}
 /* --------------- Responsive Full Header--------------- */
 
 /* x-small devices */
