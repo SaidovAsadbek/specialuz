@@ -27,7 +27,8 @@
         <div class="header-wrapper align-center">
             <div class="container">
                 <div class="row justify-between">
-                    <div class="col-8">
+                    <div class="call" id="call"><ion-icon name="call-outline"></ion-icon></div>
+                    <div class="col-8 " id="col-8">
                         <ul class="d-flex align-center">
                             <li class="d-flex align-center">
                                 <ion-icon name="call-outline"></ion-icon>
@@ -70,7 +71,7 @@
                     </div>
                     <div id="toggle"></div>
                     <div class="navbar-catalog">
-                        <ul class=" align-center">
+                        <ul class=" align-center d-flex">
                             <li><a href="#!" id="dropdown-toggle" class="d-flex align-center" aria-expanded="true"> Sayt
                                     Yaratish
                                     <ion-icon name="chevron-down-outline" id="up-icon"></ion-icon>
@@ -258,6 +259,25 @@
             toggle.classList.toggle('active')
             navbar.classList.toggle('active')
         })
+
+
+
+        const call =document.getElementById('call')
+        const col8 = document.getElementById('col-8')
+
+        // document.addEventListener('click', ()=>{
+
+        //     if(e.target.id !== 'col-8' && e.target.id !== 'call' ){
+        //         call.classList.remove('active')
+        //         col8.classList.remove('active')
+            
+        // }
+        // }) 
+        call.addEventListener('click', ()=>{
+            call.classList.toggle('active')
+            col8.classList.toggle('active')
+        })
+      
 
 
 
