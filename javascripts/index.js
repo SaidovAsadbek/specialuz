@@ -77,7 +77,7 @@ window.addEventListener("load", () => {
     $id("menu-outline").addEventListener("click", navbarMenu);
 
     const callMenu = () => {
-        $id("call-collapse").classList.toggle("active");
+        $id("call-collapse").classList.toggle("call-active");
     };
     $id("call").addEventListener("click", callMenu);
 

@@ -729,6 +729,9 @@ input:focus {
 }
 
 @media (max-width: 767px) {
+    .header-area-content .col-sm-9 {
+        display: none;
+    }
 
     .navbar .row {
         position: relative;
@@ -759,7 +762,7 @@ input:focus {
     }
 
     .active {
-        height: 30vh;
+        height: 50vh !important;
     }
 
     .navbar-submenu a {
@@ -789,10 +792,40 @@ input:focus {
     .row .col-8 .call-collapse {
         overflow: hidden;
         position: absolute;
-        z-index: 100;
+        z-index: 10000;
         width: 100%;
-        height: 30vh;
+        height: 0vh;
         left: 0;
+        top: 50px;
+        background: white;
+        transition: all .15s linear;
+    }
+
+    .call-active {
+        height: 30vh !important;
+    }
+
+    .row .col-8 .call-collapse ul {
+        justify-content: space-evenly;
+        height: 100%;
+        align-items: flex-start;
+    }
+
+    .row .col-8 .call-collapse a {
+        color: var(--sp-primary);
+    }
+
+    .call {
+        position: relative;
+        z-index: 11111;
+    }
+
+    .call-bar-submenu {
+        overflow: hidden;
+    }
+
+    .call.menu-outline {
+        display: block;
     }
 
     .row .col-8 .call-collapse ul.d-flex {
@@ -809,6 +842,11 @@ input:focus {
 /* medium devices */
 
 @media (min-width: 768px) {
+
+    .call.menu-outline {
+        display: none;
+    }
+
     #menu-outline {
         display: none;
     }
