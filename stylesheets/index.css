@@ -361,7 +361,10 @@ a.sp-link:hover::before {
 /* .header_wrapper>* {
     font-size: 12px;
 } */
-
+header {
+  position: relative;
+  z-index: 99;
+}
 ion-icon {
   color: var(--sp-light-green);
 }
@@ -427,7 +430,7 @@ header .sp-collaps ul {
   width: 100%;
 }
 header .sp-collaps li {
-  margin-bottom: 5px; 
+  margin-bottom: 5px;
   padding: 5px;
   background: #ffffff16;
 }
@@ -470,8 +473,8 @@ nav {
   background: var(--sp-light-green2);
   z-index: 99;
 }
-nav .justify-between {
-  height: 55px;
+nav .container .justify-between {
+  padding: 10px 0;
 }
 nav .sp-bar .col-12 a {
   display: block;
@@ -489,45 +492,81 @@ nav .sp-bar .col-12 button {
   width: 100%;
 }
 /* modalPage */
-nav .modalPage {
+header .modalPage {
+  overflow-y: scroll;
   position: absolute;
   top: 0;
   width: 100%;
   height: 0;
-  overflow: hidden;
-  z-index: 55;
-  background: #00000043;
+  z-index: 100;
   backdrop-filter: blur(10px);
   transition: 1s cubic-bezier(0, 0, 0.45, 1.14);
 }
-nav .modalPage.active {
+header .modalPage::-webkit-scrollbar{
+  display: none;
+}
+::-webkit-scrollbar{
+  display: none;
+}
+header .modalPage .sp-close-modal {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 30px;
+  height: 100%;
+  background: linear-gradient(
+    transparent,
+    rgba(247, 247, 247, 0.368),
+    transparent
+  );
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  font-size: 30px;
+  /* background: red; */
+}
+header .modalPage.active {
+  height: calc(100vh + 100%);
+}
+header .modalPage .d-flex.justify-center {
+  position: relative;
   height: 100%;
 }
-nav .modalPage .sp-modal {
-  padding-top: 150px;
+header .modalPage .sp-modal-body {
+  padding: 20px;
+  background: rgba(0, 0, 0, 0.548);
 }
-nav .modalPage .sp-modal-body {
-  width: 100%;
-  margin-bottom: 60px;
-}
-nav .modalPage .sp-modal-body ul h2 {
-  font-size: 20px;
-  font-weight: 400;
-  padding: 5px;
+header .modalPage .sp-modal-body h2 {
   color: var(--sp-white);
-  border-left: 3px solid var(--sp-light-green);
+  font-size: 20px;
+  width: max-content;
+  padding: 5px;
+  border-left: 3px solid var(--sp-light-green2);
 }
-nav .modalPage .sp-modal-body ul li {
-  padding-left: 10px;
-}
-nav .modalPage .sp-modal-body ul li a {
+header .modalPage .sp-modal-body ul {
   padding: 20px 0;
 }
-nav .modalPage .sp-modal-body ul li a::before {
-  background: var(--sp-light-green);
+header .modalPage .sp-modal-body ul li a {
+  margin: 0 10px;
+  padding: 15px 0;
 }
 /* modalPage */
 /* ===== Media nav ===== */
+/* nav#nav_fixed {
+  transform-origin: top;
+  transform: scale(0);
+  height: 0;
+} */
+nav {
+  position: fixed;
+  width: 100%;
+  top: auto;
+  transition: .3s;
+}
+nav#nav_fixed.active {
+  top: 0;
+  /* opacity: 0.4; */
+}
 nav .col-10 {
   display: none;
 }
@@ -538,15 +577,15 @@ nav .sp-bars-btn {
   position: relative;
   transition: 1s;
 }
-nav .sp-bars-btn.active{
+nav .sp-bars-btn.active {
   /* transition-delay: .3s; */
   animation: sp-bars-btn 1s ease-out;
 }
-@keyframes sp-bars-btn{
-  from{
+@keyframes sp-bars-btn {
+  from {
     transform: rotate(0);
   }
-  to{
+  to {
     transform: rotate(360deg);
   }
 }
@@ -566,23 +605,23 @@ nav .sp-bars-btn::before {
 nav .sp-bars-btn::after {
   top: 18px;
 }
-nav .sp-bars-btn.active::before{
-  transform: rotate(45deg) translate(5px,5px);
+nav .sp-bars-btn.active::before {
+  transform: rotate(45deg) translate(5px, 5px);
 }
-nav .sp-bars-btn.active::after{
-  transform: rotate(-45deg) translate(5px,-5px);
+nav .sp-bars-btn.active::after {
+  transform: rotate(-45deg) translate(5px, -5px);
 }
 
 nav .sp-bars-btn span {
   position: absolute;
   top: 11px;
   width: 25px;
-  height:2px;
+  height: 2px;
   left: 0;
   background: var(--sp-white);
   transition: 0.3s;
 }
-nav .sp-bars-btn.active span{
+nav .sp-bars-btn.active span {
   opacity: 0;
 }
 nav .sp-bar {
@@ -592,7 +631,7 @@ nav .sp-bar {
   overflow: hidden;
   transition: 0.3s;
 }
-nav .sp-bar .col-12{
+nav .sp-bar .col-12 {
   padding: 10px;
 }
 nav .sp-bar.active {
@@ -613,17 +652,10 @@ nav .sp-bar .sp-btn-select {
 /* section */
 
 /* section sp-header-areea */
-
-section {
-  position: absolute;
-  left: 50%;
-  transform: translate(-50%);
-  backdrop-filter: blur(10px);
-}
 .sp-heaader-area {
   width: 100%;
+  height: 100vh;
   background: url('../images/bg2.jpg') center center / cover;
-  height: 100%;
 }
 .sp-heaader-area::before {
   content: '';
@@ -635,11 +667,11 @@ section {
 .sp-heaader-area .container {
   position: relative;
   z-index: 44;
-}
-.sp-heaader-area .d-flex.align-center.justify-center {
   height: 100%;
 }
-
+.sp-heaader-area .d-flex.align-center.justify-center {
+  height: 100vh;
+}
 .sp-heaader-area .col-6 .sp-title {
   font-size: 50px;
   font-weight: 500;
@@ -674,8 +706,8 @@ section {
   padding: 10px 0 10px;
 }
 
-.sp-heaader-area .col-6 .sp-about p:nth-child(4) {
-  margin-bottom: 50px;
+.sp-heaader-area .col-6 .sp-about p:nth-child(3) {
+  margin-bottom: 5%;
 }
 
 .sp-heaader-area .sp-btn:nth-child(2) {
@@ -690,11 +722,15 @@ section {
   font-weight: 200;
 }
 /* mocup-phone */
+.sp-heaader-area .col-6 {
+  height: 400px;
+}
 .sp-heaader-area .col-6 .mocup-phone {
   position: relative;
   width: 115.3px;
   height: 211px;
-  /* transform: rotateZ(-10deg); */
+  z-index: 15;
+  transform: translate(0, 100px) scale(0.8);
   overflow: hidden;
   border-radius: 4px;
 }
@@ -702,7 +738,7 @@ section {
 .sp-heaader-area .col-6 .mocup-phone::before {
   content: '';
   position: absolute;
-  z-index: 2;
+  z-index: 1;
   width: 150px;
   height: 250px;
   background: url('../images/—Pngtree—combined\ vector\ illustration\ computer\ laptop_7361642.png') -193px -486px /
@@ -720,15 +756,14 @@ section {
   position: relative;
   width: 398px;
   height: 260px;
-  transform: translate(200px, -170px);
-  /* transform: rotateZ(-10deg); */
+  left: 80px;
   overflow: hidden;
   border-radius: 9px;
 }
 .sp-heaader-area .col-6 .mocup-com::before {
   content: '';
   position: absolute;
-  z-index: 2;
+  z-index: 4;
   width: 100%;
   height: 100%;
   background: url('../images/—Pngtree—combined\ vector\ illustration\ computer\ laptop_7361642.png') -94px -115px /
@@ -746,7 +781,6 @@ section {
   position: relative;
   width: 170px;
   height: 240px;
-  transform: translate(60px, -290px);
   z-index: 2;
   overflow: hidden;
   border-radius: 9px;
@@ -787,8 +821,13 @@ section {
 }
 /* mocup image animate */
 /* Mocup */
-.sp-heaader-area .col-6 .mocup {
+.sp-heaader-area .col-6.mocups {
   display: none;
+}
+.sp-heaader-area .col-6.mocups .mocup-com {
+  display: none;
+}
+.sp-heaader-area .col-6 .mocup {
   animation: mocup var(--i) ease-in-out infinite;
 }
 
@@ -810,13 +849,32 @@ section {
 /* section sp-header-areea */
 
 /* section */
-/* section Main */
-/*=========== Test ============= */
+/* ============== section Main ===================  */
+
+
 section.main {
   height: 500px;
-  background: rgba(0, 0, 0, 0.408);
 }
+
+section.main .col-6.a{
+  background: var(--sp-dark-green);
+  height: 500px;
+}
+
+
+/* ============== section Main ===================  */
 /* section Main */
+@media (min-width: 576px) {
+  .sp-heaader-area .col-6.mocups {
+    display: block;
+  }
+  .sp-heaader-area .col-6.mocups .mocup-phone {
+    transform: translate(10px, 150px) scale(0.8);
+  }
+  .sp-heaader-area .col-6.mocups .mocup-pln {
+    transform: translate(100px, -150px);
+  }
+}
 @media (min-width: 768px) {
   /* call - center */
   header .header_wrapper span,
@@ -850,10 +908,41 @@ section.main {
   nav .sp-bar {
     display: none;
   }
-  nav .modalPage {
-    top: auto;
+  /* header .modalPage {
+    top: 115px !important;
+  } */
+  nav .modalPage.active {
+    height: 100vh;
   }
   /* nav Link */
+  .sp-heaader-area .col-6 .mocup-pln {
+    transform: translate(200px, -200px) !important;
+  }
+}
+
+@media (min-width: 992px) {
+  .sp-heaader-area .d-flex.align-center.justify-center {
+    height: 85vh;
+  }
+  .sp-heaader-area .col-6 .mocup-phone {
+    transform: translate(100px, 100px) scale(0.8) !important;
+  }
+  .sp-heaader-area .col-6 .mocup-pln {
+    transform: translate(250px, -200px) !important;
+  }
+}
+
+@media (min-width: 1400px) {
+  .sp-heaader-area .col-6 .mocup-phone {
+    transform: translate(0px, 150px) scale(0.8) !important;
+  }
+  .sp-heaader-area .col-6 .mocup-pln {
+    transform: translate(400px, -350px) !important;
+  }
+  .sp-heaader-area .col-6.mocups .mocup-com {
+    display: block;
+    transform: translate(0px, -200px);
+  }
 }
 /* --------------- Responsive Full Header--------------- */
 

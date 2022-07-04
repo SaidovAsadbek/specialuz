@@ -94,7 +94,7 @@
             </div>
         </div>
         </div>
-        <nav>
+        <nav id="nav_fixed">
             <div class="container">
                 <div class="d-flex justify-between">
                     <div class='col-2'>
@@ -131,43 +131,45 @@
                     </div>
                 </div>
             </div>
-            <div class="modalPage" id="modalPage">
+        </nav>
+        <div class="modalPage" id="modalPage">
+            <div class="d-flex justify-center align-center">
                 <div class="container">
                     <div class="sp-modal-body">
-                        <div class="col-10">
-                            <div class="sp-modal-body d-flex justify-between">
-                                <ul class="">
-                                    <h2> Dasturlash xizmatlari </h2>
-                                    <li class="list"><a href="" class="sp-link">Internet do'kon yaratish</a></li>
-                                    <li class="list"><a href="" class="sp-link">Bir sahifali sayt yaratish</a></li>
-                                    <li class="list"><a href="" class="sp-link">Web Portal</a></li>
-                                    <li class="list"><a href="" class="sp-link">Katalog sayt</a></li>
-                                </ul>
-                                <ul class="">
-                                    <h2> Dasturlash xizmatlari </h2>
-                                    <li class="list"><a href="" class="sp-link">Internet do'kon yaratish</a></li>
-                                    <li class="list"><a href="" class="sp-link">Bir sahifali sayt yaratish</a></li>
-                                    <li class="list"><a href="" class="sp-link">Web Portal</a></li>
-                                    <li class="list"><a href="" class="sp-link">Katalog sayt</a></li>
-                                </ul>
-                                <ul class="">
-                                    <h2> Dasturlash xizmatlari </h2>
-                                    <li class="list"><a href="" class="sp-link">Internet do'kon yaratish</a></li>
-                                    <li class="list"><a href="" class="sp-link">Bir sahifali sayt yaratish</a></li>
-                                    <li class="list"><a href="" class="sp-link">Web Portal</a></li>
-                                    <li class="list"><a href="" class="sp-link">Katalog sayt</a></li>
-                                </ul>
-                            </div>
-                            <button class="sp-btn sp-btn-light"><span>Buyurtma berish</span></button>
+                        <div class="d-flex justify-between flex-wrap">
+                            <ul>
+                                <h2> Dasturlash xizmatlari </h2>
+                                <li class="list"><a href="" class="sp-link">Internet do'kon yaratish</a></li>
+                                <li class="list"><a href="" class="sp-link">Bir sahifali sayt yaratish</a></li>
+                                <li class="list"><a href="" class="sp-link">Web Portal</a></li>
+                                <li class="list"><a href="" class="sp-link">Katalog sayt</a></li>
+                            </ul>
+                            <ul>
+                                <h2> Dasturlash xizmatlari </h2>
+                                <li class="list"><a href="" class="sp-link">Internet do'kon yaratish</a></li>
+                                <li class="list"><a href="" class="sp-link">Bir sahifali sayt yaratish</a></li>
+                                <li class="list"><a href="" class="sp-link">Web Portal</a></li>
+                                <li class="list"><a href="" class="sp-link">Katalog sayt</a></li>
+                            </ul>
+                            <ul>
+                                <h2> Dasturlash xizmatlari </h2>
+                                <li class="list"><a href="" class="sp-link">Internet do'kon yaratish</a></li>
+                                <li class="list"><a href="" class="sp-link">Bir sahifali sayt yaratish</a></li>
+                                <li class="list"><a href="" class="sp-link">Web Portal</a></li>
+                                <li class="list"><a href="" class="sp-link">Katalog sayt</a></li>
+                            </ul>
                         </div>
+                        <button class="sp-close-modal" id="sp_close_modal">
+                            <ion-icon name="chevron-up-outline"></ion-icon>
+                        </button>
                     </div>
                 </div>
             </div>
-        </nav>
+        </div>
     </header>
     <section class="sp-heaader-area">
         <div class="container">
-            <div class="d-flex justify-centeer align-center">
+            <div class="d-flex justify-center align-center">
                 <div class="row">
                     <div class="col-6">
                         <div class="sp-about">
@@ -180,15 +182,11 @@
                                 assumenda
                                 fugit perferendis, eaque magni quasi adipisci explicabo dolor et iusto eum, sapiente eos
                                 ducimus aliquid consectetur eius asperiores.</p>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi laboriosam cumque
-                                assumenda
-                                fugit perferendis, eaque magni quasi adipisci explicabo dolor et iusto eum, sapiente eos
-                                ducimus aliquid consectetur eius asperiores.</p>
                             <button class="sp-btn sp-btn-light"><span>Buyurtma berish</span></button>
                             <button class="sp-btn sp-btn-light"><span>Bog'lanish</span></button>
                         </div>
                     </div>
-                    <div class="col-6">
+                    <div class="col-6 mocups">
                         <div class="mocup-phone mocup" style="--i:2s;">
                             <img src="./images/mocupLaptop.jpg" style="--i:0;" alt="">
                             <img src="./images/resWeb.jpg" style="--i:220px;" alt="">
@@ -207,22 +205,19 @@
                     </div>
                 </div>
             </div>
+
         </div>
     </section>
-    
-    <!-- Test Section -->
-    <!-- Test Section -->
-    <!-- <section class="main">
-        <div class="container">
-            <div class="row">
-                <div class="col-6"></div>
-                <div class="col-6"></div>
-            </div>
-        </div>
-    </section> -->
 
-    <!-- <div id="particles-js">
-    </div> -->
+    <!-- Test Section -->
+    <!-- Test Section -->
+    <section class="main">
+        <div class="row">
+            <div class="col-6 a"></div>
+            <div class="col-6"></div>
+        </div>
+    </section>
+
     <!-- scripts -->
     <script>
     </script>
