@@ -427,13 +427,12 @@ header .sp-collaps ul {
   width: 100%;
 }
 header .sp-collaps li {
-  margin-bottom: 5px;
+  margin-bottom: 5px; 
   padding: 5px;
   background: #ffffff16;
 }
 header .row .sp-call-btn {
   background: transparent;
-  display: block;
   animation: call-btn 1s infinite;
 }
 @keyframes call-btn {
@@ -537,89 +536,73 @@ nav .sp-bars-btn {
   height: 25px;
   background: transparent;
   position: relative;
-  transform: rotate(0deg);
-  transition: .3s;
+  transition: 1s;
 }
-nav .sp-bars-btn.active {
-  transition-delay: .5s;
-  animation: sp-bars-btn 1s ease-in-out;
-  animation-delay: .5s;
-  transform: rotate(45deg);
+nav .sp-bars-btn.active{
+  /* transition-delay: .3s; */
+  animation: sp-bars-btn 1s ease-out;
 }
-@keyframes sp-bars-btn {
-  0% {
-    transform: rotate(0deg);
+@keyframes sp-bars-btn{
+  from{
+    transform: rotate(0);
   }
-  100% {
-    transform: rotate(405deg);
+  to{
+    transform: rotate(360deg);
   }
 }
 nav .sp-bars-btn::before,
 nav .sp-bars-btn::after {
   content: '';
-  transform: translate(-50%);
   position: absolute;
+  left: 0;
   width: 25px;
   height: 2px;
   background: var(--sp-white);
   transition: 0.3s;
 }
-nav .sp-bars-btn.active::before,
-nav .sp-bars-btn.active::after {
-  top: 11px;
-  transform: translate(-50%) rotate(90deg);
-}
-
 nav .sp-bars-btn::before {
   top: 4px;
 }
 nav .sp-bars-btn::after {
   top: 18px;
 }
-nav .sp-bars-btn span::before {
-  content: '';
-  position: absolute;
-  left: 25px;
-  width: 25px;
-  height: 2px;
-  transition: 0.3s;
+nav .sp-bars-btn.active::before{
+  transform: rotate(45deg) translate(5px,5px);
+}
+nav .sp-bars-btn.active::after{
+  transform: rotate(-45deg) translate(5px,-5px);
 }
 
 nav .sp-bars-btn span {
   position: absolute;
   top: 11px;
   width: 25px;
-  height: 2px;
+  height:2px;
   left: 0;
   background: var(--sp-white);
   transition: 0.3s;
 }
-nav .sp-bars-btn.active span {
-  left: 25px;
-  background: transparent;
-}
-nav .sp-bars-btn.active span::before {
-  transition-delay: 0.3s;
-  left: -25px;
-  background: white;
+nav .sp-bars-btn.active span{
+  opacity: 0;
 }
 nav .sp-bar {
-  display: block;
   background: #008d0051;
-  padding: 0;
+  /* padding: 10px 10px; */
   height: 0px;
   overflow: hidden;
   transition: 0.3s;
 }
-
+nav .sp-bar .col-12{
+  padding: 10px;
+}
 nav .sp-bar.active {
-  padding: 10px 10px;
+  /* padding: 10px 10px; */
   height: 190px;
 }
+
 nav .sp-bar .sp-btn-select {
   height: 40px;
 }
-
 /* ===== Media nav ===== */
 /* --------------- Navbar --------------- */
 
@@ -631,12 +614,12 @@ nav .sp-bar .sp-btn-select {
 
 /* section sp-header-areea */
 
-/* section {
+section {
   position: absolute;
   left: 50%;
   transform: translate(-50%);
   backdrop-filter: blur(10px);
-} */
+}
 .sp-heaader-area {
   width: 100%;
   background: url('../images/bg2.jpg') center center / cover;
@@ -649,7 +632,7 @@ nav .sp-bar .sp-btn-select {
   height: 100%;
   background: rgba(0, 0, 0, 0.27);
 }
-.sp-heaader-area > * {
+.sp-heaader-area .container {
   position: relative;
   z-index: 44;
 }
@@ -805,6 +788,7 @@ nav .sp-bar .sp-btn-select {
 /* mocup image animate */
 /* Mocup */
 .sp-heaader-area .col-6 .mocup {
+  display: none;
   animation: mocup var(--i) ease-in-out infinite;
 }
 

@@ -2,6 +2,7 @@
 sp_call_btn.onclick = function () {
   collaps.classList.toggle("active");
   sp_bar.classList.remove('active')
+  sp_bars_btn.classList.remove('active')
 };
 // call center Toggle
 // Nav toggle 
