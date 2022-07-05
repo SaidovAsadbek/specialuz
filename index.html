@@ -15,6 +15,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
         integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="./stylesheets/font-awesome.min.css">
     <!-- ------------ Animation Css ------------ -->
     <link rel="stylesheet" href="./javascripts/animationJS/css/style.css">
     <!-- ------------ Custom Css ------------ -->
@@ -37,13 +38,13 @@
                                     <ul class="d-flex align-center">
                                         <li class="d-flex align-center">
                                             <ion-icon name="call-outline"></ion-icon>
-                                            <a href="">
+                                            <a href="tel:(99) 033 00 96">
                                                 <span class="address">(99) 033 00 96</span>
                                             </a>
                                         </li>
                                         <li class="d-flex align-center">
                                             <ion-icon name="call-outline"></ion-icon>
-                                            <a href="">
+                                            <a href="tel:(99) 266 84 79">
                                                 <span class="address">(99) 266 84 79</span>
                                             </a>
                                         </li>
@@ -70,7 +71,7 @@
                     </div>
                 </div>
             </div>
-            <nav class="navbar navbar-collapse top-bar" id="navbar">
+            <nav class="navbar navbar-collapse" id="navbar">
                 <div class="container">
                     <div class="row flex-nowrap justify-between align-center">
                         <div class="col-2">
@@ -83,14 +84,14 @@
                             </button>
                             <div class="navbar-submenu" id="navbar-submenu">
                                 <ul class="d-flex align-center">
-                                    <li><a href="#!" id="dropdown-toggle" class="d-flex align-center"
+                                    <li><a href="#!" id="dropdown-toggle" class="d-inline-block align-center"
                                             aria-expanded="true">
                                             Sayt
                                             Yaratish
                                             <ion-icon name="chevron-down-outline" id="up-icon"></ion-icon>
                                         </a></li>
-                                    <li><a href="" class="d-flex align-center"> Ish namunalarimiz </a></li>
-                                    <li><a href="" class="d-flex align-center"> Narxlar </a></li>
+                                    <li><a href="" class="d-inline-block align-center"> Ish namunalarimiz </a></li>
+                                    <li><a href="" class="d-inline-block align-center"> Narxlar </a></li>
                                     <button class="btn btn-success" id="order-btn">Buyurtma berish</button>
                                 </ul>
                             </div>
@@ -99,6 +100,9 @@
                 </div>
                 <div class="sp-submenu toggle-menu" id="collapse">
                     <div class="container">
+                        <div class="sp-submenu-close-btn close-mega" id="submenu-close-btn">
+                            <ion-icon name="close-outline"></ion-icon>
+                        </div>
                         <div class="py-3">
                             <div class="row justify-between">
                                 <div class="col-3">
@@ -158,7 +162,7 @@
                             <p>Har bir ishni ustasi qilgan yaxshi. O’zingizni ortiqcha xarajatlardan saqlang.</p>
                             <p>Hoziroq biz bilan bog'laning.</p>
                             <div class="btn-group">
-                                <button class="btn btn-success">Buyurtma berish</button>
+                                <button class="btn btn-success" id="order-btn-safe">Buyurtma berish</button>
                                 <a class="phone-link btn" href="tel:(99) 266 84-79">(99) 266 84-79</a>
                             </div>
                         </div>
@@ -177,8 +181,8 @@
                         </div>
                     </div>
                 </div>
-                <div class="order-menu d-none" id="order-menu">
-                    <form action="">
+                <div class="order-menu scale" id="order-menu">
+                    <form action="/send-poster">
                         <div class="d-flex align-center justify-between">
                             <h2>Biz bilan bog'lanish</h2>
                             <ion-icon name="close-outline" id="close-menu"></ion-icon>
@@ -199,8 +203,78 @@
         </div>
     </div>
 
+    <main class="main" id="main">
+        <section class="wb-helper">
+            <div class="container">
+                <div class="row justify-center">
+                    <div class="col-4 text-center animate-icons" id="animate-icons">
+                        <div class="animation-bg">
+                            <div class="wb-animate">
+                                <div class="top-icon" id="top-icon">
+                                    <svg style="filter: drop-shadow(4px 5px 4px rgba(50,36,233,0.3)); fill: #3224e9;"
+                                        xmlns="http://www.w3.org/2000/svg" viewBox="0 0 177.4 197.4">
+                                        <path
+                                            d="M0,58.4v79.9c0,6.5,3.5,12.6,9.2,15.8l70.5,40.2c5.6,3.2,12.4,3.2,18,0l70.5-40.2c5.7-3.2,9.2-9.3,9.2-15.8V58.4 c0-6.5-3.5-12.6-9.2-15.8L97.7,2.4c-5.6-3.2-12.4-3.2-18,0L9.2,42.5C3.5,45.8,0,51.8,0,58.4z">
+                                        </path>
+                                    </svg>
+                                </div>
+                                <div class="center-icon">
+                                    <i class="fa-solid fa-globe"></i>
+                                </div>
+                                <div class="bottom-icon" id="bottom-icon">
+                                    <svg style="filter: drop-shadow(4px 5px 4px rgba(82,172,250,0.3)); fill: #52acfa;"
+                                        xmlns="http://www.w3.org/2000/svg" viewBox="0 0 177.4 197.4">
+                                        <path
+                                            d="M0,58.4v79.9c0,6.5,3.5,12.6,9.2,15.8l70.5,40.2c5.6,3.2,12.4,3.2,18,0l70.5-40.2c5.7-3.2,9.2-9.3,9.2-15.8V58.4 c0-6.5-3.5-12.6-9.2-15.8L97.7,2.4c-5.6-3.2-12.4-3.2-18,0L9.2,42.5C3.5,45.8,0,51.8,0,58.4z">
+                                        </path>
+                                    </svg>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="wb-content">
+                            <h2> Sayt yaratish </h2>
+                            <p>Internet magazin, vizitka sayt, Korporativ sayt, web-portal yaratamiz</p>
+                            <a href="/" class="link-more">Batafsil</a>
+                        </div>
+                    </div>
+                    <div class="col-4 text-center animate-icons" id="animate-icons">
+                        <div class="animation-bg">
+                            <div class="wb-animate">
+                                <div class="top-icon" id="top-icon">
+                                    <svg style="filter: drop-shadow(4px 5px 4px rgba(50,36,233,0.3)); fill: #3224e9;"
+                                        xmlns="http://www.w3.org/2000/svg" viewBox="0 0 177.4 197.4">
+                                        <path
+                                            d="M0,58.4v79.9c0,6.5,3.5,12.6,9.2,15.8l70.5,40.2c5.6,3.2,12.4,3.2,18,0l70.5-40.2c5.7-3.2,9.2-9.3,9.2-15.8V58.4 c0-6.5-3.5-12.6-9.2-15.8L97.7,2.4c-5.6-3.2-12.4-3.2-18,0L9.2,42.5C3.5,45.8,0,51.8,0,58.4z">
+                                        </path>
+                                    </svg>
+                                </div>
+                                <div class="center-icon">
+                                    <i class="fa-solid fa-globe"></i>
+                                </div>
+                                <div class="bottom-icon" id="bottom-icon">
+                                    <svg style="filter: drop-shadow(4px 5px 4px rgba(82,172,250,0.3)); fill: #52acfa;"
+                                        xmlns="http://www.w3.org/2000/svg" viewBox="0 0 177.4 197.4">
+                                        <path
+                                            d="M0,58.4v79.9c0,6.5,3.5,12.6,9.2,15.8l70.5,40.2c5.6,3.2,12.4,3.2,18,0l70.5-40.2c5.7-3.2,9.2-9.3,9.2-15.8V58.4 c0-6.5-3.5-12.6-9.2-15.8L97.7,2.4c-5.6-3.2-12.4-3.2-18,0L9.2,42.5C3.5,45.8,0,51.8,0,58.4z">
+                                        </path>
+                                    </svg>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="wb-content">
+                            <h2> Sayt yaratish </h2>
+                            <p>Internet magazin, vizitka sayt, Korporativ sayt, web-portal yaratamiz</p>
+                            <a href="/" class="link-more">Batafsil</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <i class="flaticon-close-2"></i>
+
     <!-- scripts -->
-    <script src="./javascripts/jQuery.min.js"></script>
     <script src="./javascripts/animationJS/particles.js"></script>
     <script src="./javascripts/animationJS/js/lib/stats.js"></script>
     <script src="./javascripts/animationJS/js/app.js"></script>
