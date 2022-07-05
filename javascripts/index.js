@@ -28,14 +28,11 @@ sp_close_modal.onclick = function () {
 // Nav , toggle modal
 // Nav Scroll
 window.addEventListener("scroll", () => {
-  if (window.scrollY > 25) {
-    if (!nav_fixed.classList.contains("active")) {
-      nav_fixed.classList.add("active");
-    }
+  if (window.scrollY > 38) {
+    header_fixed.classList.add("active");
   } else {
-    nav_fixed.classList.remove("active");
+    header_fixed.classList.remove("active");
   }
-  console.log(WinScroll);
   if (WinScroll < window.scrollY) {
     collaps.classList.remove("active");
     sp_bars_btn.classList.remove("active");
@@ -45,3 +42,23 @@ window.addEventListener("scroll", () => {
   }
 });
 // Nav Scroll
+// Parellax
+// const mocup = document.querySelectorAll('.mocup')
+// window.addEventListener('mousemove',(e)=>{
+//   for (let i = 0; i < mocup.length; i++) {
+//     var speed = mocup[i].getAttribute('data-speed') 
+//     let y = (window.innerHeight -  e.clientY * speed) / 100
+//     let x = (window.innerWidth - e.clientX * speed) / 100
+//     mocup[i].style.top = `${y}px`
+//     mocup[i].style.left = `${x}px`
+//   }
+// })
+// Parellax
+// =============== LEAF
+const leaf = document.querySelectorAll('.leaf')
+leaf.forEach(element => {
+  element.onclick = ()=>{
+    element.classList.toggle('active')
+  }
+});
+// =============== LEAF

@@ -362,8 +362,19 @@ a.sp-link:hover::before {
     font-size: 12px;
 } */
 header {
-  position: relative;
+  position: absolute;
   z-index: 99;
+  width: 100%;
+  top: 0;
+}
+header#header_fixed.active {
+  transition: 0.3s;
+  position: fixed;
+  top: 0;
+}
+header#header_fixed.active .header_wrapper {
+  overflow: hidden;
+  height: 0;
 }
 ion-icon {
   color: var(--sp-light-green);
@@ -502,12 +513,12 @@ header .modalPage {
   backdrop-filter: blur(10px);
   transition: 1s cubic-bezier(0, 0, 0.45, 1.14);
 }
-header .modalPage::-webkit-scrollbar{
+header .modalPage::-webkit-scrollbar {
   display: none;
 }
-::-webkit-scrollbar{
+/* ::-webkit-scrollbar{
   display: none;
-}
+} */
 header .modalPage .sp-close-modal {
   display: flex;
   justify-content: center;
@@ -557,16 +568,15 @@ header .modalPage .sp-modal-body ul li a {
   transform: scale(0);
   height: 0;
 } */
-nav {
-  position: fixed;
+/* nav {
+  position: absolute;
   width: 100%;
-  top: auto;
-  transition: .3s;
+  top: 40px;
 }
 nav#nav_fixed.active {
+  position: fixed;
   top: 0;
-  /* opacity: 0.4; */
-}
+} */
 nav .col-10 {
   display: none;
 }
@@ -653,16 +663,14 @@ nav .sp-bar .sp-btn-select {
 
 /* section sp-header-areea */
 .sp-heaader-area {
+  overflow-y: scroll;
+  padding-top: 120px;
   width: 100%;
   height: 100vh;
   background: url('../images/bg2.jpg') center center / cover;
 }
-.sp-heaader-area::before {
-  content: '';
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.27);
+.sp-heaader-area::-webkit-scrollbar {
+  display: none;
 }
 .sp-heaader-area .container {
   position: relative;
@@ -672,14 +680,14 @@ nav .sp-bar .sp-btn-select {
 .sp-heaader-area .d-flex.align-center.justify-center {
   height: 100vh;
 }
-.sp-heaader-area .col-6 .sp-title {
+.sp-heaader-area .col-6 .sp-logo {
   font-size: 50px;
   font-weight: 500;
   padding-bottom: 20px;
   position: relative;
 }
 
-.sp-heaader-area .col-6 .sp-title::before {
+.sp-heaader-area .col-6 .sp-logo::before {
   content: 'IT Special';
   position: absolute;
   width: max-content;
@@ -690,7 +698,7 @@ nav .sp-bar .sp-btn-select {
   transition-delay: 0.3s;
 }
 
-.sp-heaader-area .col-6 .sp-title::after {
+.sp-heaader-area .col-6 .sp-logo::after {
   content: 'IT Special';
   position: absolute;
   top: 0;
@@ -828,6 +836,7 @@ nav .sp-bar .sp-btn-select {
   display: none;
 }
 .sp-heaader-area .col-6 .mocup {
+  background: white;
   animation: mocup var(--i) ease-in-out infinite;
 }
 
@@ -851,17 +860,118 @@ nav .sp-bar .sp-btn-select {
 /* section */
 /* ============== section Main ===================  */
 
-
-section.main {
-  height: 500px;
+section {
+  padding: 20px 0;
+}
+section .sp-title {
+  text-align: center;
+  font-weight: 700;
+  padding: 30px;
+}
+section.main .sp-title a {
+  text-decoration: underline;
+  color: var(--sp-light-green2);
+}
+section.main .sp-title span {
+  color: var(--sp-light-green2);
+}
+/* Atropos */
+section.main .cards .row {
+  display: none;
+}
+section.main .atropos-inner {
+  padding: 10px;
+}
+section.main .sp-card-image {
+  position: relative;
+  overflow: hidden;
+}
+section.main .sp-card-image:hover .sp-card-describe {
+  bottom: 0;
 }
 
-section.main .col-6.a{
-  background: var(--sp-dark-green);
-  height: 500px;
+section.main .sp-card-describe {
+  background: linear-gradient(-90deg, #0ebd0e39, #008d00 80%);
+  position: absolute;
+  bottom: -100%;
+  width: 100%;
+  color: var(--sp-white);
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  transition: 0.3s ease-out;
+}
+section.main .sp-card-describe .sp-card-title h1 {
+  font-weight: 400;
+}
+section.main .sp-card-describe .sp-card-title p {
+  font-size: 15px;
+}
+section.main .cards .leaf-views {
+  width: max-content;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  transition: 0.3s;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+section.main .cards .leaf-views p {
+  color: var(--sp-light-green2);
+  font-size: 20px;
+}
+section.main .row  .cards .leaf-views svg {
+  cursor: pointer;
+  width: 40px;
+  padding-left: 10px;
+}
+section.main .cards svg path {
+  stroke: var(--sp-light-green2);
+  fill: none;
+}
+section.main .cards .leaf.active path {
+  /* stroke: var(--sp-light-green2); */
+  stroke: var(--sp-dark-green);
+  fill: var(--sp-light-green);
 }
 
+section.main .atropos-inner span {
+  display: none;
+}
 
+.sp-swiper .swiper-wrapper {
+  height: 350px;
+  position: relative;
+}
+.sp-swiper .swiper-wrapper .leaf-views{ 
+  display: block !important; 
+}
+.sp-swiper .swiper-wrapper .leaf-views .leaf {
+  cursor: pointer !important;
+  width: 30px !important;
+  margin: auto !important;
+  padding-left: none  !important;
+}
+
+.sp-swiper .swiper-wrapper .leaf-views p {
+  font-size: 12.5px;
+  color: var(--sp-dark-green);
+}
+.sp-swiper .swiper-wrapper .leaf-views {
+  width: max-content;
+  position: absolute;
+  top: 150px !important;
+  right: 20px;
+  transition: 0.3s;
+  text-align: center !important;
+}
+.sp-swiper .swiper-wrapper .sp-card-describe {
+  bottom: 0;
+}
+
+/* Atropos */
 /* ============== section Main ===================  */
 /* section Main */
 @media (min-width: 576px) {
@@ -908,15 +1018,19 @@ section.main .col-6.a{
   nav .sp-bar {
     display: none;
   }
-  /* header .modalPage {
-    top: 115px !important;
-  } */
   nav .modalPage.active {
     height: 100vh;
   }
   /* nav Link */
   .sp-heaader-area .col-6 .mocup-pln {
     transform: translate(200px, -200px) !important;
+  }
+  section.main .cards .row {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  section.main .cards .swiper {
+    display: none;
   }
 }
 
@@ -930,6 +1044,11 @@ section.main .col-6.a{
   .sp-heaader-area .col-6 .mocup-pln {
     transform: translate(250px, -200px) !important;
   }
+
+  section.main .sp-card-describe {
+    display: block;
+  }
+
 }
 
 @media (min-width: 1400px) {
