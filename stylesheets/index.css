@@ -1,3 +1,6 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 * {
   margin: 0;
   padding: 0;
@@ -663,7 +666,6 @@ nav .sp-bar .sp-btn-select {
 
 /* section sp-header-areea */
 .sp-heaader-area {
-  overflow-y: scroll;
   padding-top: 120px;
   width: 100%;
   height: 100vh;
@@ -677,9 +679,7 @@ nav .sp-bar .sp-btn-select {
   z-index: 44;
   height: 100%;
 }
-.sp-heaader-area .d-flex.align-center.justify-center {
-  height: 100vh;
-}
+
 .sp-heaader-area .col-6 .sp-logo {
   font-size: 50px;
   font-weight: 500;
@@ -749,7 +749,7 @@ nav .sp-bar .sp-btn-select {
   z-index: 1;
   width: 150px;
   height: 250px;
-  background: url('../images/—Pngtree—combined\ vector\ illustration\ computer\ laptop_7361642.png') -193px -486px /
+  background: url('../images/mocup.png') -193px -486px /
     850px;
 }
 .sp-heaader-area .col-6 .mocup-phone img {
@@ -774,7 +774,7 @@ nav .sp-bar .sp-btn-select {
   z-index: 4;
   width: 100%;
   height: 100%;
-  background: url('../images/—Pngtree—combined\ vector\ illustration\ computer\ laptop_7361642.png') -94px -115px /
+  background: url('../images/mocup.png') -94px -115px /
     1025px;
 }
 .sp-heaader-area .col-6 .mocup-com img {
@@ -799,7 +799,7 @@ nav .sp-bar .sp-btn-select {
   z-index: 2;
   width: 100%;
   height: 100%;
-  background: url('../images/—Pngtree—combined\ vector\ illustration\ computer\ laptop_7361642.png') -458px -80px /
+  background: url('../images/mocup.png') -458px -80px /
     750px;
 }
 .sp-heaader-area .col-6 .mocup-pln img {
@@ -886,11 +886,11 @@ section.main .sp-card-image {
   position: relative;
   overflow: hidden;
 }
-section.main .sp-card-image:hover .sp-card-describe {
+section.main .cards .row .sp-card-image:hover .sp-card-describe {
   bottom: 0;
 }
 
-section.main .sp-card-describe {
+section.main .cards .row .sp-card-describe {
   background: linear-gradient(-90deg, #0ebd0e39, #008d00 80%);
   position: absolute;
   bottom: -100%;
@@ -902,13 +902,13 @@ section.main .sp-card-describe {
   justify-content: space-between;
   transition: 0.3s ease-out;
 }
-section.main .sp-card-describe .sp-card-title h1 {
+section.main .cards .row .sp-card-describe .sp-card-title h1 {
   font-weight: 400;
 }
-section.main .sp-card-describe .sp-card-title p {
+section.main .cards .row .sp-card-describe .sp-card-title p {
   font-size: 15px;
 }
-section.main .cards .leaf-views {
+section.main .cards .row .leaf-views {
   width: max-content;
   position: absolute;
   top: 20px;
@@ -918,11 +918,11 @@ section.main .cards .leaf-views {
   align-items: center;
   justify-content: space-between;
 }
-section.main .cards .leaf-views p {
+section.main .cards .row .leaf-views p {
   color: var(--sp-light-green2);
   font-size: 20px;
 }
-section.main .row  .cards .leaf-views svg {
+section.main .cards .row .leaf-views svg {
   cursor: pointer;
   width: 40px;
   padding-left: 10px;
@@ -941,36 +941,55 @@ section.main .atropos-inner span {
   display: none;
 }
 
-.sp-swiper .swiper-wrapper {
-  height: 350px;
-  position: relative;
+section.main .sp-swiper {
+  /* padding: 20px 0; */
+  height: 450px;
 }
-.sp-swiper .swiper-wrapper .leaf-views{ 
-  display: block !important; 
-}
-.sp-swiper .swiper-wrapper .leaf-views .leaf {
-  cursor: pointer !important;
-  width: 30px !important;
-  margin: auto !important;
-  padding-left: none  !important;
-}
-
-.sp-swiper .swiper-wrapper .leaf-views p {
-  font-size: 12.5px;
-  color: var(--sp-dark-green);
-}
-.sp-swiper .swiper-wrapper .leaf-views {
+section.main .swiper-wrapper .swiper-slide .leaf-views {
   width: max-content;
   position: absolute;
-  top: 150px !important;
+  bottom: 80px;
   right: 20px;
   transition: 0.3s;
-  text-align: center !important;
+  text-align: center;
+  color: var(--sp-light-green2);
 }
-.sp-swiper .swiper-wrapper .sp-card-describe {
+section.main .swiper-wrapper .swiper-slide .leaf-views svg {
+  width: 40px;
+}
+section.main .swiper-wrapper .swiper-slide .sp-card-image {
+  position: relative;
+  height: 100%;
+}
+section.main .swiper-wrapper .swiper-slide .sp-card-image img {
+  height: 100%;
+  object-fit: cover;
+}
+section.main .cards .sp-swiper .sp-card-describe {
+  position: absolute;
   bottom: 0;
+  background: linear-gradient(-90deg, #0ebd0e39, #008d00 80%);
+  width: 100%;
+  color: var(--sp-white);
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  transition: 0.3s ease-out;
 }
 
+section.main .cards .sp-swiper .sp-card-describe .sp-card-title h1 {
+  font-weight: 400;
+}
+section.main .cards .sp-swiper .sp-card-describe .sp-card-title p {
+  font-size: 15px;
+}
+
+section.main .cards .view-all {
+  display: block;
+  width: max-content;
+  margin: 10px auto;
+}
 /* Atropos */
 /* ============== section Main ===================  */
 /* section Main */
@@ -1048,7 +1067,6 @@ section.main .atropos-inner span {
   section.main .sp-card-describe {
     display: block;
   }
-
 }
 
 @media (min-width: 1400px) {

@@ -15,9 +15,10 @@
     <!-- ------------ Animation Css ------------ -->
     <!-- <link rel="stylesheet" href="./javascripts/animationJS/css/style.css"> -->
     <!-- Atropos -->
-    <link rel="stylesheet" href="./library/node_modules/atropos/atropos.css" />
-    <link rel="stylesheet" href="./library/node_modules/swiper/swiper-bundle.min.css">
+    <link rel="stylesheet" href="./node_modules/atropos/atropos.css" />
+    <link rel="stylesheet" href="./node_modules/swiper/swiper-bundle.min.css">
     <!-- Atropos -->
+    <link rel="stylesheet" href="./dist/output.css">
     <!-- ------------ Custom Css ------------ -->
     <link rel="stylesheet" href="./stylesheets/index.css">
     <title>IT Special</title>
@@ -26,9 +27,9 @@
 <body>
     <header id="header_fixed">
         <div class="header_wrapper">
-            <div class="container">
+            <div class="container ">
                 <div class="row">
-                    <div class="d-flex justify-between align-center">
+                    <div class="d-flex justify-between align-center ">
                         <div class="col-9">
                             <ul class="d-flex">
                                 <li class="d-flex align-center">
@@ -102,7 +103,7 @@
             <div class="container">
                 <div class="d-flex justify-between">
                     <div class='col-2'>
-                        <a href="/" style="color: white;">IT Special</a>
+                        <a href="/" class="text-white">IT Special</a>
                     </div>
                     <div class="col-10">
                         <div class="d-flex justify-end">
@@ -216,7 +217,8 @@
     <main>
         <section class="main" id="main">
             <div class="container">
-                <h1 class="sp-title">Eng ko'p <a href="#"><span>leaf</span></a> va <span>ko'rilgan</span> websitelar
+                <h1 class="sp-title text-2xl">Eng ko'p <a href="#"><span>leaf</span></a> va <span>ko'rilgan</span>
+                    websitelar
                 </h1>
                 <div class="cards">
                     <div class="row">
@@ -424,15 +426,85 @@
                                         </svg>
                                         <p>799</p>
                                     </div>
+                                    <div class="sp-card-describe">
+                                        <div class="sp-card-title">
+                                            <h1>Dizaynlar uchun sayt</h1>
+                                            <p>Eng sara UX UI dizayn uchun sayt</p>
+                                        </div>
+                                    </div>
                                 </div>
-                                <div class="sp-card-describe">
-                                    <div class="sp-card-title">
-                                        <h1>Dizaynlar uchun sayt</h1>
-                                        <p>Eng sara UX UI dizayn uchun sayt</p>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="sp-card-image" data-atropos-offset="0">
+                                    <a href="#">
+                                        <img src="./images//webste2.jpg" width='100%' alt="">
+                                    </a>
+                                    <div class="leaf-views">
+                                        <svg class="leaf" viewBox="0 0 512 512">
+                                            <title>Leaf</title>
+                                            <path
+                                                d="M321.89 171.42C233 114 141 155.22 56 65.22c-19.8-21-8.3 235.5 98.1 332.7 77.79 71 197.9 63.08 238.4-5.92s18.28-163.17-70.61-220.58zM173 253c86 81 175 129 292 147"
+                                                fill="none" stroke="none" stroke-linecap="round" stroke-linejoin="round"
+                                                stroke-width="32" />
+                                        </svg>
+                                        <p>799</p>
+                                    </div>
+                                    <div class="sp-card-describe">
+                                        <div class="sp-card-title">
+                                            <h1>Dizaynlar uchun sayt</h1>
+                                            <p>Eng sara UX UI dizayn uchun sayt</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="sp-card-image" data-atropos-offset="0">
+                                    <a href="#">
+                                        <img src="./images//webste3.jpg" width='100%' alt="">
+                                    </a>
+                                    <div class="leaf-views">
+                                        <svg class="leaf" viewBox="0 0 512 512">
+                                            <title>Leaf</title>
+                                            <path
+                                                d="M321.89 171.42C233 114 141 155.22 56 65.22c-19.8-21-8.3 235.5 98.1 332.7 77.79 71 197.9 63.08 238.4-5.92s18.28-163.17-70.61-220.58zM173 253c86 81 175 129 292 147"
+                                                fill="none" stroke="none" stroke-linecap="round" stroke-linejoin="round"
+                                                stroke-width="32" />
+                                        </svg>
+                                        <p>799</p>
+                                    </div>
+                                    <div class="sp-card-describe">
+                                        <div class="sp-card-title">
+                                            <h1>Dizaynlar uchun sayt</h1>
+                                            <p>Eng sara UX UI dizayn uchun sayt</p>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
+                    </div>
+                    <a href="#" class="sp-btn-light sp-btn view-all"><span>Ko'proq ko'rish</span></a>
+                </div>
+            </div>
+        </section>
+        <section id="aboutWeb" class="aboutWeb">
+            <div class="container mx-auto py-5">
+                <h1 class="text-center text-2xl font-bold mb-5">Buyurtmachilar uchun saytimiz qulayliklari</h1>
+                <div class="flex-none flex-wrap md:flex">
+                    <div class="flex items-center text-xl my-3 md:w-1/2 duration-300">
+                        <span class="text-white py-3 px-5 bg-lgreen2 font-bold">1</span>
+                        <p class="mx-3 bg-lgreen2 bg-opacity-50 py-3 px-3 w-full">Buyurtma berish oson</p>
+                    </div>
+                    <div class="flex items-center text-xl my-3 md:w-1/2">
+                        <span class="text-white py-3 px-5 bg-lgreen2 font-bold">2</span>
+                        <p class="mx-3 bg-lgreen2 bg-opacity-50 py-3 px-3 w-full">Auto tarjima</p>
+                    </div>
+                    <div class="flex items-center text-xl my-3 md:w-1/2">
+                        <span class="text-white py-3 px-5 bg-lgreen2 font-bold">3</span>
+                        <p class="mx-3 bg-lgreen2 bg-opacity-50 py-3 px-3 w-full">Sifatli ish</p>
+                    </div>
+                    <div class="flex items-center text-xl my-3 md:w-1/2">
+                        <span class="text-white py-3 px-5 bg-lgreen2 font-bold">4</span>
+                        <p class="mx-3 bg-lgreen2 bg-opacity-50 py-3 px-3 w-full">Turli dizayndagi saytlar</p>
                     </div>
                 </div>
             </div>
@@ -440,12 +512,13 @@
     </main>
 
     <!-- scripts -->
-    <script src="./library/node_modules/swiper/swiper-bundle.min.js"></script>
-    <script src="./library/node_modules/atropos/atropos.min.js"></script>
+    <script src="./node_modules/swiper/swiper-bundle.min.js"></script>
+    <script src="./node_modules/atropos/atropos.min.js"></script>
     <script>
         const swiper = new Swiper('.sp-swiper', {
             direction: 'vertical',
-            loop: true,
+            loop: false,
+            mousewheel: true,
             autoplay: {
                 delay: 3000,
                 disableOnInteraction: false
@@ -454,7 +527,10 @@
         document.querySelectorAll('.my-atropos').forEach(element => {
             const myAtropos = Atropos({
                 el: element,
+                rotateXMax: 15,
+                rotateYMax: 15,
                 duration: 700,
+                activeOffset: 100,
                 alwaysActive: false,
                 shadow: false,
                 commonOrigin: false

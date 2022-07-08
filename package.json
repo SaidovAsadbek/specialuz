@@ -12,5 +12,8 @@
   "dependencies": {
     "atropos": "^1.0.2",
     "swiper": "^8.2.6"
+  },
+  "devDependencies": {
+    "tailwindcss": "^3.1.4"
   }
 }
