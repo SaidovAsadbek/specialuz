@@ -6,7 +6,8 @@ module.exports = {
       'lgreen' : '#00e200',
       'lgreen2': '#0ebd0e',
       'dgreen': '#008d00',
-      'white' : '#fff'
+      'white' : '#fff',
+      'footerbg' : '#292e31'
     },
     extend: {},
   },
