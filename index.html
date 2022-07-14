@@ -20,7 +20,7 @@
     <!-- Atropos -->
     <link rel="stylesheet" href="./dist/output.css">
     <!-- ------------ Custom Css ------------ -->
-    <link rel="stylesheet" href="./stylesheets/index.css">
+    <!-- <link rel="stylesheet" href="./stylesheets/index.css"> -->
     <title>IT Special</title>
 </head>
 
@@ -103,7 +103,7 @@
             <div class="container">
                 <div class="d-flex justify-between">
                     <div class='col-2'>
-                        <a href="/" class="text-white">IT Special</a>
+                        <a href="#" class="text-white">IT Special</a>
                     </div>
                     <div class="col-10">
                         <div class="d-flex justify-end">
@@ -111,9 +111,9 @@
                                     name="caret-down-outline">
                                 </ion-icon>
                             </button>
-                            <a href="/" class="sp-link">Ish namunalari</a>
-                            <a href="/" class="sp-link">Narxlar</a>
-                            <button class="sp-btn sp-btn-dark d-flex"><span>Buyurtma berish</span></button>
+                            <a href="#" class="sp-link">Ish namunalari</a>
+                            <a href="#" class="sp-link">Narxlar</a>
+                            <button class="sp-btn sp-btn-dark d-flex" id="placing"><span>Buyurtma berish</span></button>
                         </div>
                     </div>
                     <button class="sp-bars-btn" id="sp_bars_btn"><span></span></button>
@@ -132,42 +132,82 @@
                                 <a href="/" class="sp-link">Narxlar</a>
                             </li>
                         </ul>
-                        <button class="sp-btn sp-btn-dark d-flex"><span>Buyurtma berish</span></button>
+                        <button class="sp-btn sp-btn-dark d-flex" id="placing"><span>Buyurtma berish</span></button>
                     </div>
                 </div>
             </div>
         </nav>
         <div class="modalPage" id="modalPage">
             <div class="d-flex justify-center align-center">
+                <div class="bg-close" id="bg_close"></div>
                 <div class="container">
                     <div class="sp-modal-body">
-                        <div class="d-flex justify-between flex-wrap">
+                        <div class="d-flex justify-center md:justify-between flex-wrap">
                             <ul>
-                                <h2> Dasturlash xizmatlari </h2>
-                                <li class="list"><a href="" class="sp-link">Internet do'kon yaratish</a></li>
-                                <li class="list"><a href="" class="sp-link">Bir sahifali sayt yaratish</a></li>
-                                <li class="list"><a href="" class="sp-link">Web Portal</a></li>
-                                <li class="list"><a href="" class="sp-link">Katalog sayt</a></li>
+                                <h2> Dasturlash xizmatlari</h2>
+                                <li class="list text-end md:text-start"><a href="" class="sp-link">Internet do'kon
+                                        yaratish</a></li>
+                                <li class="list text-end md:text-start"><a href="" class="sp-link">Bir sahifali sayt
+                                        yaratish</a></li>
+                                <li class="list text-end md:text-start"><a href="" class="sp-link">Web Portal</a></li>
+                                <li class="list text-end md:text-start"><a href="" class="sp-link">Katalog sayt</a></li>
                             </ul>
                             <ul>
                                 <h2> Dasturlash xizmatlari </h2>
-                                <li class="list"><a href="" class="sp-link">Internet do'kon yaratish</a></li>
-                                <li class="list"><a href="" class="sp-link">Bir sahifali sayt yaratish</a></li>
-                                <li class="list"><a href="" class="sp-link">Web Portal</a></li>
-                                <li class="list"><a href="" class="sp-link">Katalog sayt</a></li>
+                                <li class="list text-end md:text-start"><a href="" class="sp-link">Internet do'kon
+                                        yaratish</a></li>
+                                <li class="list text-end md:text-start"><a href="" class="sp-link">Bir sahifali sayt
+                                        yaratish</a></li>
+                                <li class="list text-end md:text-start"><a href="" class="sp-link">Web Portal</a></li>
+                                <li class="list text-end md:text-start"><a href="" class="sp-link">Katalog sayt</a></li>
                             </ul>
                             <ul>
                                 <h2> Dasturlash xizmatlari </h2>
-                                <li class="list"><a href="" class="sp-link">Internet do'kon yaratish</a></li>
-                                <li class="list"><a href="" class="sp-link">Bir sahifali sayt yaratish</a></li>
-                                <li class="list"><a href="" class="sp-link">Web Portal</a></li>
-                                <li class="list"><a href="" class="sp-link">Katalog sayt</a></li>
+                                <li class="list text-end md:text-start"><a href="" class="sp-link">Internet do'kon
+                                        yaratish</a></li>
+                                <li class="list text-end md:text-start"><a href="" class="sp-link">Bir sahifali sayt
+                                        yaratish</a></li>
+                                <li class="list text-end md:text-start"><a href="" class="sp-link">Web Portal</a></li>
+                                <li class="list text-end md:text-start"><a href="" class="sp-link">Katalog sayt</a></li>
                             </ul>
                         </div>
-                        <button class="sp-close-modal" id="sp_close_modal">
-                            <ion-icon name="chevron-up-outline"></ion-icon>
-                        </button>
+                        <div class="md:hidden">
+                            <button class="sp-close-modal" id="sp_close_modal">
+                                <ion-icon name="chevron-up-outline"></ion-icon>
+                            </button>
+                        </div>
                     </div>
+                </div>
+            </div>
+        </div>
+        <div id="modalPlacing" class="modalPlacing absolute top-0 left-0 z-100 h-screen w-full backdrop-blur-md">
+            <div id="bgclose" class="h-screen w-full absolute top-0 left-0">
+            </div>
+            <div class="container">
+                <div class="flex flex-col items-center justify-center h-screen w-full">
+                    <form action="" class="w-full md:w-1/2 relative z-10">
+                        <div class="flex flex-col p-5 bg-dark bg-opacity-50 text-white">
+                            <button id="close_Placing_btn" class=" absolute right-2 top-2 text-2xl">
+                                <ion-icon name="close-outline"></ion-icon>
+                            </button>
+                            <label for="">
+                                <h2 class="py-2 text-xl">Elektron pochta</h2>
+                                <input type="email"
+                                    class="w-full text-xl rounded p-2 text-black focus:ring-4 focus:ring-dgreen"
+                                    placeholder="Elektron pochta">
+                            </label>
+                            <label for="">
+                                <h2 class="py-2 text-xl">Maxfiy so'z</h2>
+                                <input type="password"
+                                    class="w-full text-xl rounded p-2 text-black focus:ring-4 focus:ring-dgreen"
+                                    placeholder="Maxfiy so'z">
+                            </label>
+                            <button type="submit"
+                                class="p-4 bg-lgreen2 active:bg-dgreen w-max mx-auto mt-5 rounded">Buyurtma
+                                Berish</button>
+                        </div>
+
+                    </form>
                 </div>
             </div>
         </div>
@@ -182,13 +222,12 @@
                             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi laboriosam cumque
                                 assumenda
                                 fugit perferendis, eaque magni quasi adipisci explicabo dolor et iusto eum, sapiente eos
-                                ducimus aliquid consectetur eius asperiores.</p>
+                                ducimus aliquid consectetur.</p>
                             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi laboriosam cumque
                                 assumenda
-                                fugit perferendis, eaque magni quasi adipisci explicabo dolor et iusto eum, sapiente eos
-                                ducimus aliquid consectetur eius asperiores.</p>
-                            <button class="sp-btn sp-btn-light my-1"><span>Buyurtma berish</span></button>
-                            <button class="sp-btn sp-btn-light my-1"><span>Bog'lanish</span></button>
+                                fugit perferendis, eaque magni quasi adipisci.</p>
+                            <button class="sp-btn sp-btn-light my-1" id="placing"><span>Buyurtma berish</span></button>
+                            <!-- <button class="sp-btn sp-btn-light my-1"><span>Bog'lanish</span></button> -->
                         </div>
                     </div>
                     <div class="col-6 mocups">
@@ -523,51 +562,51 @@
             </div>
         </section>
     </main>
-    <footer class="bg-lgreen2">
+    <footer class="bg-black">
         <div class="container">
-            <div class="flex text-white py-5 flex-wrap text-center">
+            <div class="flex text-white py-5 flex-wrap">
                 <div class="w-1/2 md:w-1/4">IT Special</div>
-                <ul class="w-1/2 md:w-1/4">
+                <ul class="w-1/2 text-end md:w-1/4 md:text-start">
                     <h3 class="">Hizmatlarimiz</h3>
                     <li>
-                        <a href="#" class="sp-link text-xs">Sayt yaratish</a>
+                        <a href="#" class=" text-xs">Sayt yaratish</a>
                     </li>
                     <li>
-                        <a href="#" class="sp-link text-xs">Ish namunalari</a>
+                        <a href="#" class=" text-xs">Ish namunalari</a>
                     </li>
                     <li>
-                        <a href="#" class="sp-link text-xs">Narxlar</a>
+                        <a href="#" class=" text-xs">Narxlar</a>
                     </li>
                 </ul>
                 <ul class="w-1/2 mt-6 md:w-1/4 md:mt-0">
                     <h3>IT Special</h3>
                     <li>
-                        <a href="#" class="sp-link text-xs">Loyiha haqida</a>
+                        <a href="#" class="text-xs">Loyiha haqida</a>
                     </li>
                     <li>
-                        <a href="#" class="sp-link text-xs">Saytdan foydalanish kelishuvi</a>
+                        <a href="#" class="text-xs">Saytdan foydalanish kelishuvi</a>
                     </li>
                     <li>
-                        <a href="#" class="sp-link text-xs">Biz bilan bog'lanish</a>
+                        <a href="#" class="text-xs">Biz bilan bog'lanish</a>
                     </li>
                     <li>
-                        <a href="#" class="sp-link text-xs">Maxfiylik siyosati</a>
+                        <a href="#" class="text-xs">Maxfiylik siyosati</a>
                     </li>
                 </ul>
-                <ul class="w-1/2 mt-6 md:w-1/4 md:mt-0">
-                    <h2 >Aloqalar</h2>
-                    <li class="flex items-center justify-center">
-                        <ion-icon name="mail-outline" class="text-white text-lg"></ion-icon>
-                        <a href="https:/t.me/IT_Center_70" class="sp-link text-xs ">IT Special</a>
+                <ul class="w-1/2 mt-6 text-end md:w-1/4 md:mt-0 md:text-start">
+                    <h2>Aloqalar</h2>
+                    <li class="flex items-center justify-end md:justify-start">
+                        <ion-icon name="mail-outline" class="text-white text-lg pr-1"></ion-icon>
+                        <a href="https:/t.me/IT_Center_70" class="text-xs">IT Special</a>
                     </li>
-                    <li class="flex items-center justify-center">
-                        <ion-icon name="call-outline" class="text-white text-lg"></ion-icon>
-                        <a href="tel:+998941234567" class="sp-link text-xs">+998(94) 123 45 67</a>
+                    <li class="flex items-center justify-end md:justify-start">
+                        <ion-icon name="call-outline" class="text-white text-lg pr-1"></ion-icon>
+                        <a href="tel:+998941234567" class="text-xs">+998(94) 123 45 67</a>
                     </li>
                 </ul>
             </div>
         </div>
-        <div class="footer-btm bg-dgreen py-5">
+        <div class="footer-btm bg-ldark py-5">
             <div class="container">
                 <div class="flex justify-between">
                     <p class="text-white">© IT Special</p>

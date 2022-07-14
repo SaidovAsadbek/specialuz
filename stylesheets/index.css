@@ -172,9 +172,9 @@ html {
   justify-content: center;
 }
 
-.justify-end {
+/* .justify-end {
   justify-content: end;
-}
+} */
 
 .d-inline {
   display: inline;
@@ -434,7 +434,7 @@ header .sp-collaps {
   transition: 0.3s;
 }
 header .sp-collaps.active {
-  height: 112.5px;
+  height: 122.5px;
 }
 header .sp-collaps .row {
   flex-direction: column;
@@ -471,6 +471,9 @@ header .row .sp-call-btn {
   100% {
     transform: rotate(0);
   }
+}
+header .row .sp-call-btn ion-icon{
+  font-size: 20px;
 }
 header .header_wrapper span,
 header .header_wrapper ion-icon,
@@ -542,9 +545,18 @@ header .modalPage .sp-close-modal {
 header .modalPage.active {
   height: calc(100vh + 100%);
 }
-header .modalPage .d-flex.justify-center {
+header .modalPage .d-flex.justify-center{
   position: relative;
   height: 100%;
+}
+header .modalPage .d-flex.justify-center .container{
+  position: relative;
+  z-index: 3;
+}
+header .modalPage .bg-close{
+  position: absolute;
+  height: 100%;
+  width: 100%;
 }
 header .modalPage .sp-modal-body {
   padding: 20px;
@@ -564,22 +576,16 @@ header .modalPage .sp-modal-body ul li a {
   margin: 0 10px;
   padding: 15px 0;
 }
-/* modalPage */
-/* ===== Media nav ===== */
-/* nav#nav_fixed {
-  transform-origin: top;
-  transform: scale(0);
-  height: 0;
-} */
-/* nav {
-  position: absolute;
-  width: 100%;
-  top: 40px;
+/* modal Palcing */
+.modalPlacing{
+  transition: 1s;
+  top: -100vh;
 }
-nav#nav_fixed.active {
-  position: fixed;
+.modalPlacing.active{
   top: 0;
-} */
+}
+/* modal Palcing */
+/* Modals */
 nav .col-10 {
   display: none;
 }
@@ -649,7 +655,7 @@ nav .sp-bar .col-12 {
 }
 nav .sp-bar.active {
   /* padding: 10px 10px; */
-  height: 190px;
+  height: 210px;
 }
 
 nav .sp-bar .sp-btn-select {
@@ -666,8 +672,8 @@ nav .sp-bar .sp-btn-select {
 
 /* section sp-header-areea */
 .sp-heaader-area {
-  overflow: scroll;
-  padding-top: 120px;
+  /* overflow: scroll; */
+  padding-top: 100px;
   width: 100%;
   height: 100vh;
   background: url('../images/bg2.jpg') center center / cover;
@@ -750,8 +756,7 @@ nav .sp-bar .sp-btn-select {
   z-index: 1;
   width: 150px;
   height: 250px;
-  background: url('../images/mocup.png') -193px -486px /
-    850px;
+  background: url('../images/mocup.png') -193px -486px / 850px;
 }
 .sp-heaader-area .col-6 .mocup-phone img {
   width: calc(100% - 2px);
@@ -775,8 +780,7 @@ nav .sp-bar .sp-btn-select {
   z-index: 4;
   width: 100%;
   height: 100%;
-  background: url('../images/mocup.png') -94px -115px /
-    1025px;
+  background: url('../images/mocup.png') -94px -115px / 1025px;
 }
 .sp-heaader-area .col-6 .mocup-com img {
   width: 100%;
@@ -800,8 +804,7 @@ nav .sp-bar .sp-btn-select {
   z-index: 2;
   width: 100%;
   height: 100%;
-  background: url('../images/mocup.png') -458px -80px /
-    750px;
+  background: url('../images/mocup.png') -458px -80px / 750px;
 }
 .sp-heaader-area .col-6 .mocup-pln img {
   width: 100%;
@@ -996,6 +999,9 @@ section.main .cards .view-all {
 /* section Main */
 
 /* ========== Footer ======== */
+footer ul a{
+  text-decoration: underline;
+}
 /* ========== Footer ======== */
 @media (min-width: 576px) {
   .sp-heaader-area .col-6.mocups {
