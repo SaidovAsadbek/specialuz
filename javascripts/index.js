@@ -1,3 +1,12 @@
+
+window.addEventListener("scroll", () => {
+  if (window.scrollY > 36) {
+    nav.classList.add("active");
+  } else {
+    nav.classList.remove("active");
+  }
+});
+
 // call center Toggle
 sp_call_btn.onclick = function () {
   collaps.classList.toggle("active");
@@ -50,9 +59,9 @@ for (let i = 0; i < placing.length; i++) {
 bgclose.onclick = () => {
   modalPlacing.classList.remove("active");
 };
-close_Placing_btn.onclick = ()=>{
+close_Placing_btn.onclick = () => {
   modalPlacing.classList.remove("active");
-}
+};
 // Buyurtma berish
 
 // Parellax
