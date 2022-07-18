@@ -25,27 +25,31 @@ window.addEventListener("load", () => {
     // ---------- Submenu 
 
     // ---------- Scroll Navbar 
-    // const scrollBar = () => {
-    //     let lists;
-    //     if (window.scrollY > 50) {
-    //         $id("navbar").classList.add("fixed-bar");
-    //         $id("collapse").classList.add("menu-scroller");
-    //         $id("btn-light").classList.add("bg-success");
-    //         lists = document.querySelectorAll(".list a");
-    //         lists.forEach(list => {
-    //             list.classList.add("bar-lists");
-    //         });
-    //     } else {
-    //         lists = document.querySelectorAll(".list a");
-    //         lists.forEach(list => {
-    //             list.classList.remove("bar-lists");
-    //         });
-    //         $id("collapse").classList.remove("menu-scroller");
-    //         $id("navbar").classList.remove("fixed-bar");
-    //         $id("btn-light").classList.remove("bg-success");
-    //     }
-    // };
-    // window.addEventListener("scroll", scrollBar);
+    const scrollBar = () => {
+        let lists;
+        if (window.scrollY > 50) {
+            $id("navbar").classList.add("fixed-bar");
+            $id("collapse").classList.add("menu-scroller");
+            $id("collapse").style.top = "60px";
+            $id("btn-light").classList.add("bg-success");
+            lists = document.querySelectorAll(".list a");
+            lists.forEach(list => {
+                list.classList.add("bar-lists");
+            });
+            $id("close-color").style.color = "black";
+        } else {
+            $id("collapse").style.top = "44px";
+            lists = document.querySelectorAll(".list a");
+            lists.forEach(list => {
+                list.classList.remove("bar-lists");
+            });
+            $id("collapse").classList.remove("menu-scroller");
+            $id("navbar").classList.remove("fixed-bar");
+            $id("btn-light").classList.remove("bg-success");
+            $id("close-color").style.color = "white";
+        }
+    };
+    window.addEventListener("scroll", scrollBar);
 
     // ---------- Scroll Navbar 
 
@@ -124,7 +128,5 @@ window.addEventListener("load", () => {
         $id("call-collapse").classList.toggle("call-active");
     };
     $id("call").addEventListener("click", callMenu);
-    // ---------- Call-Center 
-
     // ---------- Call-Center 
 });

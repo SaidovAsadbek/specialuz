@@ -25,7 +25,7 @@
 
 <body id="body">
     <div class="header-effect-submenu">
-        <header>
+        <header id="header">
             <div class="header-wrapper" id="nav">
                 <div class="container">
                     <div class="row justify-between">
@@ -59,14 +59,26 @@
                             </div>
                         </div>
                         <div class="col-3 text-right">
-                            <div class="language d-flex justify-end">
+                            <script>
+                                function googleTranslateElementInit() {
+                                    new google.translate.TranslateElement({
+                                        pageLanguage: 'uz',
+                                        includedLanguages: "en,ru,uz"
+                                    }, 'google_translate_element');
+                                }
+                            </script>
+                            <script type="text/javascript"
+                                src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit">
+                            </script>
+                            <div id="google_translate_element"></div>
+                            <!-- <div class="language d-flex justify-end">
                                 <i class="fa-solid fa-globe"></i>
                                 <a href="/">O'zbekcha</a>
                                 <div class="text-border">|</div>
                                 <a href="/ru">Русский</a>
                                 <div class="text-border">|</div>
                                 <a href="/en">English</a>
-                            </div>
+                            </div> -->
                         </div>
                     </div>
                 </div>
@@ -101,7 +113,7 @@
                 <div class="sp-submenu toggle-menu" id="collapse">
                     <div class="container">
                         <div class="sp-submenu-close-btn close-mega" id="submenu-close-btn">
-                            <ion-icon name="close-outline"></ion-icon>
+                            <ion-icon name="close-outline" id="close-color"></ion-icon>
                         </div>
                         <div class="py-3">
                             <div class="row justify-between">
@@ -150,7 +162,7 @@
             </nav>
         </header>
         <div id="particles-js">
-            <section class="header-area-content py-4">
+            <section class="header-area-content">
                 <div class="container">
                     <div class="row justify-between-md">
                         <div class="col-5 col-sm-12">
@@ -206,12 +218,12 @@
     <main class="main" id="main">
         <section class="wb-helper">
             <div class="container">
-                <div class="row justify-center">
-                    <div class="col-4 text-center animate-icons" id="animate-icons">
+                <div class="row justify-evenly">
+                    <div class="col-3 text-center animate-icons" id="animate-icons">
                         <div class="animation-bg">
                             <div class="wb-animate">
                                 <div class="top-icon" id="top-icon">
-                                    <svg style="filter: drop-shadow(4px 5px 4px rgba(50,36,233,0.3)); fill: #3224e9;"
+                                    <svg style="filter: drop-shadow(4px 5px 4px rgba(255,86,0,0.3)); fill: #ff5600;"
                                         xmlns="http://www.w3.org/2000/svg" viewBox="0 0 177.4 197.4">
                                         <path
                                             d="M0,58.4v79.9c0,6.5,3.5,12.6,9.2,15.8l70.5,40.2c5.6,3.2,12.4,3.2,18,0l70.5-40.2c5.7-3.2,9.2-9.3,9.2-15.8V58.4 c0-6.5-3.5-12.6-9.2-15.8L97.7,2.4c-5.6-3.2-12.4-3.2-18,0L9.2,42.5C3.5,45.8,0,51.8,0,58.4z">
@@ -219,10 +231,10 @@
                                     </svg>
                                 </div>
                                 <div class="center-icon">
-                                    <i class="fa-solid fa-globe"></i>
+                                    <ion-icon name="cog-outline"></ion-icon>
                                 </div>
                                 <div class="bottom-icon" id="bottom-icon">
-                                    <svg style="filter: drop-shadow(4px 5px 4px rgba(82,172,250,0.3)); fill: #52acfa;"
+                                    <svg style="filter: drop-shadow(4px 5px 4px rgba(255,167,5,0.3)); fill: #ffa705;"
                                         xmlns="http://www.w3.org/2000/svg" viewBox="0 0 177.4 197.4">
                                         <path
                                             d="M0,58.4v79.9c0,6.5,3.5,12.6,9.2,15.8l70.5,40.2c5.6,3.2,12.4,3.2,18,0l70.5-40.2c5.7-3.2,9.2-9.3,9.2-15.8V58.4 c0-6.5-3.5-12.6-9.2-15.8L97.7,2.4c-5.6-3.2-12.4-3.2-18,0L9.2,42.5C3.5,45.8,0,51.8,0,58.4z">
@@ -232,12 +244,42 @@
                             </div>
                         </div>
                         <div class="wb-content">
-                            <h2> Sayt yaratish </h2>
-                            <p>Internet magazin, vizitka sayt, Korporativ sayt, web-portal yaratamiz</p>
+                            <h2> Sayt yuritish </h2>
+                            <p>Saytga textnik xizmat ko'rsatamiz. Saytga ma'lumot joylashtirib beramiz.</p>
                             <a href="/" class="link-more">Batafsil</a>
                         </div>
                     </div>
-                    <div class="col-4 text-center animate-icons" id="animate-icons">
+                    <div class="col-3 text-center animate-icons" id="animate-icons">
+                        <div class="animation-bg">
+                            <div class="wb-animate">
+                                <div class="top-icon" id="top-icon">
+                                    <svg style="filter: drop-shadow(4px 5px 4px rgba(105,233,242,0.3)); fill: #69e9f2;"
+                                        xmlns="http://www.w3.org/2000/svg" viewBox="0 0 177.4 197.4">
+                                        <path
+                                            d="M0,58.4v79.9c0,6.5,3.5,12.6,9.2,15.8l70.5,40.2c5.6,3.2,12.4,3.2,18,0l70.5-40.2c5.7-3.2,9.2-9.3,9.2-15.8V58.4 c0-6.5-3.5-12.6-9.2-15.8L97.7,2.4c-5.6-3.2-12.4-3.2-18,0L9.2,42.5C3.5,45.8,0,51.8,0,58.4z">
+                                        </path>
+                                    </svg>
+                                </div>
+                                <div class="center-icon">
+                                    <ion-icon name="phone-portrait-outline"></ion-icon>
+                                </div>
+                                <div class="bottom-icon" id="bottom-icon">
+                                    <svg style="filter: drop-shadow(4px 5px 4px rgba(18,175,254,0.3)); fill: #12affe;"
+                                        xmlns="http://www.w3.org/2000/svg" viewBox="0 0 177.4 197.4">
+                                        <path
+                                            d="M0,58.4v79.9c0,6.5,3.5,12.6,9.2,15.8l70.5,40.2c5.6,3.2,12.4,3.2,18,0l70.5-40.2c5.7-3.2,9.2-9.3,9.2-15.8V58.4 c0-6.5-3.5-12.6-9.2-15.8L97.7,2.4c-5.6-3.2-12.4-3.2-18,0L9.2,42.5C3.5,45.8,0,51.8,0,58.4z">
+                                        </path>
+                                    </svg>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="wb-content">
+                            <h2> Sayt mobil ilovasi </h2>
+                            <p>Android uchun saytingizning mobil ilovasini yaratamiz</p>
+                            <a href="/" class="link-more">Batafsil</a>
+                        </div>
+                    </div>
+                    <div class="col-3 text-center animate-icons" id="animate-icons">
                         <div class="animation-bg">
                             <div class="wb-animate">
                                 <div class="top-icon" id="top-icon">
@@ -270,9 +312,96 @@
                 </div>
             </div>
         </section>
-    </main>
 
-    <i class="flaticon-close-2"></i>
+        <section class="main-work">
+            <div class="container">
+                <div class="row align-center justify-center">
+                    <div class="col-5">
+                        <div class="work-title">
+                            <h2> Bizning asosiy xizmatlarimiz </h2>
+                            <p>Daromad keltiradigan internet do'konlar yaratamiz, Korporativ asytlar, portallar hamda
+                                talabingizga binoan saytlar ishlab chiqaramiz. Shuningdek android uchun saytingizning
+                                mobil
+                                ilovasini yaratamiz hamda saytni ishlab turishini ta'minlaymiz.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 mt-4">
+                    <div class="row justify-evenly">
+                        <div class="col-3">
+                            <div class="static-icon">
+                                <ion-icon name="stats-chart-outline"></ion-icon>
+                            </div>
+                            <div class="work-content">
+                                <h2>vizitka sayt</h2>
+                                <p>Korxona haqida asosiy ma'lumotlar(xizmatlari, faoliyato, kontaktlari)ni beradi.</p>
+                                <a href="/" class="link-more">Batafsil</a>
+                            </div>
+                        </div>
+                        <div class="col-3">
+                            <div class="static-icon">
+                                <ion-icon name="cog-outline"></ion-icon>
+                            </div>
+                            <div class="work-content">
+                                <h2>landing page</h2>
+                                <p>Xizmatlar haqida batafsil ma'lumotlar berish va Biznesingizdagi savdoni yaxshilash uchun.</p>
+                                <a href="/" class="link-more">Batafsil</a>
+                            </div>
+                        </div>
+                        <div class="col-3">
+                            <div class="static-icon">
+                                <ion-icon name="trending-up-outline"></ion-icon>
+                            </div>
+                            <div class="work-content">
+                                <h2>Korporativ sayt</h2>
+                                <p>Kompaniya haqida ko'proq ma'lumotlar va brendning mashxurligini oshirish</p>
+                                <a href="/" class="link-more">Batafsil</a>
+                            </div>
+                        </div>
+                        <div class="col-3">
+                            <div class="static-icon">
+                                <ion-icon name="layers-outline"></ion-icon>
+                            </div>
+                            <div class="work-content">
+                                <h2>Katalog sayt</h2>
+                                <p>Internet orqali maxsulotlarning samarali sotilishi uchun.</p>
+                                <a href="/" class="link-more">Batafsil</a>
+                            </div>
+                        </div>
+                        <div class="col-3">
+                            <div class="static-icon">
+                                <ion-icon name="navigate-outline"></ion-icon>
+                            </div>
+                            <div class="work-content">
+                                <h2>Internet do'kon</h2>
+                                <p>maxsulotlarni butun dunyo bo'ylab sotish yoki sotib olish uchun</p>
+                                <a href="/" class="link-more">Batafsil</a>
+                            </div>
+                        </div>
+                        <div class="col-3">
+                            <div class="static-icon">
+                                <ion-icon name="bar-chart-outline"></ion-icon>
+                            </div>
+                            <div class="work-content">
+                                <h2>Web-portallar</h2>
+                                <p>forum, savdo platformasi, ijtimoiy tarmoq, elonlar taxtasi</p>
+                                <a href="/" class="link-more">Batafsil</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="example-work">
+            <div class="container">
+                <div class="work-title">
+                    <h2> Ish namunalarimiz </h2>
+                </div>
+
+            </div>
+        </section>
+    </main>
 
     <!-- scripts -->
     <script src="./javascripts/animationJS/particles.js"></script>
@@ -285,6 +414,7 @@
         };
         requestAnimationFrame(update);
     </script>
+
     <!-- ------------ Custom Js ------------ -->
     <script src="./javascripts/index.js"></script>
     <!-- ------------ Font Awesome Ion-icon ------------ -->
