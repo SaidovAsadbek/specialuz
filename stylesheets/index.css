@@ -450,6 +450,7 @@ html {
 
 .header-area-content .col-5 h2 span {
     background: -webkit-linear-gradient(var(--sp-bg-btn-success), var(--sp-btn-success));
+    background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
@@ -490,6 +491,10 @@ header.scroll-bar .header-wrapper {
     position: fixed;
     top: 0;
 }
+
+/* --------------- Css Variables --------------- */
+
+/* --------------- Call center --------------- */
 
 /* --------------- Call center --------------- */
 
@@ -787,11 +792,13 @@ input:focus {
     background-image: -webkit-linear-gradient(0deg, #5ad0ff 0%, #3224e9 100%);
     -webkit-text-fill-color: transparent;
     -webkit-background-clip: text;
+    background-clip: text;
 }
 
 .row .col-3:nth-child(2) .wb-animate {
     color: #8cffed;
     -webkit-text-fill-color: transparent;
+    background-clip: text;
     -webkit-background-clip: text;
     background-image: -webkit-linear-gradient(0deg, #8cffed 0%, #009cff 100%);
 }
@@ -799,6 +806,7 @@ input:focus {
 .row .col-3:first-child .wb-animate {
     color: #ffc600;
     -webkit-text-fill-color: transparent;
+    background-clip: text;
     -webkit-background-clip: text;
     background-image: -webkit-linear-gradient(0deg, #ffc600 0%, #ff4200 100%);
 }
